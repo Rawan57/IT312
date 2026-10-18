@@ -97,7 +97,7 @@ header{
 .sort{
      display: flex;
     gap:10px;
-    align-items: center;
+    align-items:center;
 }
 .filters-buttons {
     display: flex;
