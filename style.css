@@ -84,4 +84,27 @@ header{
     text-align: center;
     padding: 12px;
      }
-   
+   .search {
+    margin: 25px 0;
+}
+
+.search input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.filters button {
+    padding: 8px 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+}
