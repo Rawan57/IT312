@@ -107,6 +107,7 @@ align-items: center;
 .filter-buttons {
     display: flex;
     gap: 30px;
+    color:azure;
 }
 
 .filter-buttons button{
