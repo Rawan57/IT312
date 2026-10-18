@@ -87,6 +87,12 @@ header{
    .search {
     margin: 25px 0;
 }
+.search input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
 
 .sort{
      display: flex;
