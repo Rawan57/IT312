@@ -106,7 +106,7 @@ align-items: center;
 }
 .filter-buttons {
     display: flex;
-    gap: 30px;px;
+    gap: 30px;
 }
 
 .filter-buttons button{
