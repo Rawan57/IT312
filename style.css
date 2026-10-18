@@ -88,21 +88,17 @@ header{
     margin: 25px 0;
 }
 
-.search input {
-    width: 300px;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 20px;
-}
-
-.filters {
-    display: flex;
+.sort{
+     display: flex;
+    gap:10px;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 25px;
+}
+.filters-buttons {
+    display: flex;
+    gap:20px;
 }
 
-.filters button {
+.filters-buttons button{
     padding: 8px 20px;
     border: 1px solid black;
     border-radius: 20px;
