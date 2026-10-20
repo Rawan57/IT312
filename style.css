@@ -116,3 +116,47 @@ align-items: center;
     border-radius: 20px;
     background-color: white;
 }
+.offerings{
+    display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+    gap: 25px;
+   margin-bottom: 40px;
+}
+.card{
+    width: 30%;
+    border: 1px solid black;
+    border-radius: 15px;
+   padding: 15px;
+}
+.food-img {
+    width: 100%;
+    height: 150px;
+    border-radius: 12px;
+}
+
+.card h3 {
+    font-size: 17px;
+    margin: 5px 0;
+    text-decoration: underline;
+}
+
+.card p {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.card .chef {
+    font-size: 11px;
+}
+
+.card .location {
+    margin-top: 20px;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
