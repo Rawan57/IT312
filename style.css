@@ -115,6 +115,7 @@ align-items: center;
     border: 1px solid black;
     border-radius: 20px;
     background-color: white;
+     margin-bottom: 10px;
 }
 .offerings{
     display: flex;
