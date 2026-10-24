@@ -240,3 +240,13 @@ align-items: center;
 .learning li {
     margin-bottom: 8px;
 }
+.details-info span {
+    display: flex;
+    align-items: center;
+}
+
+.details-info img {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+}
