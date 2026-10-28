@@ -141,10 +141,10 @@ align-items: center;
     display: block;
 }
 
-.card h3 {
+.card h2 {
     font-size: 17px;
     margin: 5px 0;
-    text-decoration: underline;
+   text-decoration:underline; 
 }
 
 .card p {
