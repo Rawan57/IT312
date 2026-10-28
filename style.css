@@ -183,7 +183,7 @@ align-items: center;
 .details-image {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    /* object-fit: cover; */
 }
 
 .details-content {
