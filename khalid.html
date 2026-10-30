@@ -1,0 +1,165 @@
+<title>Activity Leader Profile - Chef Ahmed</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 30px;
+        color: #222;
+        background-color: white;
+    }
+
+    .container {
+        max-width: 850px;
+        margin: auto;
+    }
+
+    .breadcrumb {
+        margin-bottom: 15px;
+        color: #555;
+    }
+
+    .back-link {
+        display: inline-block;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .profile-table {
+        width: 85%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        table-layout: fixed;
+    }
+
+    .profile-table th,
+    .profile-table td {
+        border: 2px solid #777;
+        padding: 18px 12px;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .profile-table .name-cell {
+        font-size: 25px;
+        padding: 25px;
+        background-color: #eeeeee;
+    }
+
+    .profile-table .photo-cell {
+        width: 28%;
+        padding: 12px;
+    }
+
+    .profile-table .photo-cell img {
+        width: 100%;
+        max-width: 140px;
+        height: 160px;
+        object-fit: cover;
+        border: 1px solid #999;
+        border-radius: 5px;
+    }
+
+    .profile-table .label-cell {
+        font-weight: bold;
+        background-color: #f3f3f3;
+    }
+
+    .about-me {
+        width: 85%;
+        margin: 20px auto;
+        line-height: 1.6;
+    }
+
+    .about-me h2 {
+        margin-bottom: 5px;
+    }
+
+    @media (max-width: 600px) {
+        body {
+            padding: 15px;
+        }
+
+        .profile-table,
+        .about-me {
+            width: 100%;
+        }
+
+        .profile-table th,
+        .profile-table td {
+            padding: 10px 5px;
+            font-size: 13px;
+        }
+
+        .profile-table .name-cell {
+            font-size: 21px;
+        }
+
+        .profile-table .photo-cell img {
+            height: 110px;
+        }
+    }
+</style>
+
+<main class="container">
+
+    <p class="breadcrumb">
+        Home &gt; About Us &gt; Our Team &gt; Chef Ahmed
+    </p>
+
+    <a href="about_us.html" class="back-link">&lt; Back</a>
+
+    <table class="profile-table">
+
+        <tr>
+            <th colspan="3" class="name-cell">
+                Chef Ahmed
+            </th>
+        </tr>
+
+        <tr>
+            <td rowspan="5" class="photo-cell">
+                <img src="/Users/ebtisam/Desktop/Web/IT312/Alya_images/Khalid.jpg" alt="Chef Ahmed">
+            </td>
+
+            <td class="label-cell">Date of Birth</td>
+            <td>1/1/1995</td>
+        </tr>
+
+        <tr>
+            <td class="label-cell">Email</td>
+            <td>ahmed@example.com</td>
+        </tr>
+
+        <tr>
+            <td class="label-cell">Area of Expertise</td>
+            <td>Italian Cooking</td>
+        </tr>
+
+        <tr>
+            <td class="label-cell">Skills</td>
+            <td>Baking, Grilling</td>
+        </tr>
+
+        <tr>
+            <td class="label-cell">Education</td>
+            <td>Culinary Arts</td>
+        </tr>
+
+    </table>
+
+    <section class="about-me">
+        <h2>About Me</h2>
+
+        <p>
+            I am a passionate chef with experience in Italian cuisine.
+            I enjoy sharing my cooking knowledge and helping others
+            discover new cooking techniques.
+        </p>
+    </section>
+
+</main>

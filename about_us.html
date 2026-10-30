@@ -1,0 +1,325 @@
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="About_Us.html">About Us</a>
+</nav>
+
+
+<main class="container">
+
+    <!-- About Us: Mission -->
+    <section class="mission">
+
+        <h2>Our Mission</h2>
+
+        <p>
+            Our cooking club aims to help people develop cooking skills,
+            discover new interests, express their creativity, and connect
+            with others through cooking experiences.
+        </p>
+    </section>
+
+    <!-- Activity Leaders and Instructors -->
+    <section class="team">
+        <h2>Our Team</h2>
+
+        <div class="team-list">
+
+           <div class="team-card">
+    <a href="khalid.html" class="chef-link">
+        <img src="/Users/ebtisam/Desktop/Web/IT312/Alya_images/Khalid.jpg" alt="Chef Khalid">
+        <span>Chef Khalid</span>
+    </a>
+</div>
+
+<div class="team-card">
+    <a href="chef-sara.html" class="chef-link">
+        <img src="chef2.jpg" alt="Chef Sara">
+        <span>Chef Sara</span>
+    </a>
+</div>
+
+<div class="team-card">
+    <a href="chef-mohammed.html" class="chef-link">
+        <img src="chef3.jpg" alt="Chef Mohammed">
+        <span>Chef Mohammed</span>
+    </a>
+</div>
+
+</div>
+
+
+
+        </div>
+    </section>
+
+    <!-- Join Our Team Form -->
+   <details class="join-details">
+
+    <summary class="join-button">
+        Join Our Team
+    </summary>
+
+    <form class="join-form"
+          action="#"
+          method="post"
+          enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="photo">Photo</label>
+            <input type="file" id="photo" name="photo"
+                   accept="image/*" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="expertise">Expertise</label>
+            <input type="text" id="expertise" name="expertise" required>
+        </div>
+
+        <div class="form-group">
+            <label for="skills">Skills</label>
+            <input type="text" id="skills" name="skills" required>
+        </div>
+
+        <div class="form-group">
+            <label for="education">Education</label>
+            <input type="text" id="education" name="education" required>
+        </div>
+
+        <button type="submit" class="submit-button">
+            Submit
+        </button>
+
+    </form>
+
+</details>
+
+</main>
+
+
+<style>
+    * {
+box-sizing: border-box;
+}
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 30px;
+color: #222;
+background-color: white;
+}
+.container {
+max-width: 1100px;
+margin: auto;
+}
+/* About Us and Our Mission */
+.mission {
+margin-bottom: 40px;
+}
+h1 {
+font-size: 30px;
+margin-bottom: 25px;
+}
+h2 {
+font-size: 25px;
+margin-bottom: 15px;
+}
+.mission p {
+max-width: 650px;
+line-height: 1.6;
+color: #555;
+}
+/* Our Team */
+.team {
+margin-bottom: 35px;
+}
+.team-list {
+display: flex;
+gap: 25px;
+overflow-x: auto;
+padding: 10px 5px 20px;
+scroll-behavior: smooth;
+}
+.team-card {
+flex: 0 0 200px;
+border: 2px solid #999;
+border-radius: 15px;
+padding: 10px;
+text-align: center;
+}
+.team-card img {
+width: 100%;
+height: 130px;
+object-fit: cover;
+border: 1px solid #999;
+border-radius: 10px;
+}
+.team-card a {
+display: inline-block;
+margin-top: 12px;
+margin-bottom: 5px;
+color: #333;
+font-weight: bold;
+}
+.team-card a:hover {
+color: #777;
+}
+/* Join Our Team */
+.join-team {
+margin-top: 20px;
+}
+.join-details {
+max-width: 600px;
+}
+/* Join Our Team Button */
+.join-button {
+display: inline-block;
+padding: 10px 25px;
+margin-bottom: 20px;
+background-color: #d6d6d6;
+border: 2px solid #999;
+border-radius: 10px;
+font-size: 23px;
+font-weight: bold;
+cursor: pointer;
+list-style: none;
+}
+.join-button::-webkit-details-marker {
+display: none;
+}
+.join-button:hover {
+background-color: #bbb;
+}
+/* Join Our Team Form */
+.join-form {
+max-width: 600px;
+margin-top: 10px;
+}
+.form-group {
+display: flex;
+align-items: center;
+gap: 15px;
+
+    margin-bottom: 14px;
+
+}
+
+.form-group label {
+
+    width: 140px;
+
+    font-weight: bold;
+
+}
+
+.form-group input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 9px;
+
+    border: 2px solid #aaa;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+
+}
+
+.submit-button {
+
+    display: block;
+
+    margin: 20px auto;
+
+    padding: 10px 45px;
+
+    background-color: #d6d6d6;
+
+    border: 2px solid #999;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+.submit-button:hover {
+
+    background-color: #bbb;
+
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 18px;
+
+    }
+
+    h1 {
+
+        font-size: 26px;
+
+    }
+
+    h2 {
+
+        font-size: 22px;
+
+    }
+
+    .team-card {
+
+        flex-basis: 170px;
+
+    }
+
+    .form-group {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 6px;
+
+    }
+
+    .form-group label {
+
+        width: auto;
+
+    }
+
+    .join-button {
+
+        font-size: 20px;
+
+    }
+
+}
+</style>
