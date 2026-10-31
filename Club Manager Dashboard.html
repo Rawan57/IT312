@@ -1,0 +1,186 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<title>Club Manager Dashboard</title> 
+<link rel="stylesheet" href="style.css"> 
+<style> 
+
+.manager-main { 
+    background-color: var(--cream); 
+    color: var(--espresso);
+    padding: 15px 2%; 
+}
+
+
+.manager-main h1 { 
+    margin-bottom: 20px; 
+}
+
+
+.manager-main table { 
+    width: 85%; 
+    margin: 20px auto; 
+    text-align: center; 
+}
+
+
+.manager-main th { 
+    padding: 14px; 
+}
+
+
+.manager-main td { 
+    padding: 12px; 
+}
+
+.Dashboard-Buttons { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
+    margin: 25px auto; 
+}
+
+.Dashboard-Buttons a { 
+    display: inline-block; 
+    width: 240px; 
+    padding: 12px 20px; 
+    text-align: center; 
+    background-color: var(--olive); 
+    color: var(--white); 
+    border: 1px solid var(--olive); 
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none; 
+    cursor: pointer;
+}
+
+.Dashboard-Buttons a:active { 
+    background-color: var(--gold); 
+}
+
+</style> 
+</head> 
+ 
+<body class="manager-body"> 
+ 
+<!-- Header --> 
+ 
+<header> 
+    <div class="logo"> 
+        <img src="logo.jpg" alt="logo"> 
+        <h2>Taste Journey</h2> 
+    </div> 
+</header> 
+ 
+<!-- Navigation Bar --> 
+ 
+<div class="navbar"> 
+    <nav> 
+       <a href="Home.html">Home</a> | 
+        <a href="Offering.html">Club Offerings</a> | 
+        <a href="about_us.html">About us</a> | 
+        <a href="">Member Dashboard</a> | 
+        <a href="Club Manager Dashboard.html">Manager Dashboard</a> 
+    </nav> 
+</div> 
+ 
+<!-- Main Content --> 
+ 
+<main class="manager-main"> 
+ 
+    <h1>My Offerings</h1> 
+ 
+    <table> 
+ 
+        <thead> 
+            <tr> 
+                <th colspan="2">Offerings</th> 
+                <th colspan="3">Price</th> 
+            </tr> 
+        </thead> 
+ 
+        <tbody> 
+ 
+            <tr> 
+                <td colspan="2">Table Tales</td> 
+                <td colspan="3">100 SAR</td> 
+            </tr> 
+ 
+            <tr> 
+                <td colspan="2">Mexican Flavor</td> 
+                <td colspan="3">100 SAR</td> 
+            </tr> 
+ 
+            <tr> 
+                <td colspan="2">Mystery Basket</td> 
+                <td colspan="3">100 SAR</td> 
+            </tr> 
+ 
+        </tbody> 
+ 
+    </table> 
+ 
+    <div class="Dashboard-Buttons"> 
+ 
+        <a href="Add New Offeing.html"> 
+            Add New Offeing + 
+        </a> 
+ 
+        <a href="Manage Instructors.html"> 
+            Manage Instructors &gt; 
+        </a> 
+ 
+    </div> 
+ 
+</main> 
+ 
+<!-- Footer --> 
+ 
+<footer> 
+ 
+    <div class="footer-content"> 
+ 
+        <div class="footer-logo"> 
+            <img src="loogo.png" alt=""> 
+            <span>Taste Journey</span> 
+        </div> 
+ 
+        <div class="footer-Email"> 
+            <strong>Contact</strong><br> 
+            <a href="mailto:info@TasteJourny.edu"> 
+                info@TasteJourny.edu 
+            </a> 
+        </div> 
+ 
+        <div class="Social"> 
+            <strong>Follow us</strong> 
+ 
+            <div class="Social-img"> 
+ 
+                <a href="#"> 
+                    <img src="instagram.png" alt=""> 
+                </a> 
+ 
+                <a href="#"> 
+                    <img src="twitter.png" alt=""> 
+                </a> 
+ 
+                <a href="#"> 
+                    <img src="linkedin.png" alt=""> 
+                </a> 
+ 
+            </div> 
+        </div> 
+ 
+    </div> 
+ 
+    <div class="copyright"> 
+        &copy; 2026 Taste Journey 
+    </div> 
+ 
+</footer> 
+ 
+</body> 
+</html>
