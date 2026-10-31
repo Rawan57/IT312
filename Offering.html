@@ -152,10 +152,17 @@ align-items: center;
 </div>
 <div class="sort">
     <label for="sort">Sort by</label>
-    <select id="sort">
-        <option >Price</option>
-        <option >Name</option>
-    </select>
+   <select id="sort" name="sort">
+    <optgroup label="Price">
+        <option value="low">Low to High</option>
+        <option value="high">High to Low</option>
+    </optgroup>
+
+    <optgroup label="Name">
+        <option value="az">A-Z</option>
+        <option value="za">Z-A</option>
+    </optgroup>
+</select>
 </div>
 </div>
 <div class="offerings">
