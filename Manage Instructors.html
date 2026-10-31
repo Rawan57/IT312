@@ -1,0 +1,317 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<title>Manage Instructors</title> 
+<link rel="stylesheet" href="style.css"> 
+<style> 
+
+.manage-main { 
+    background-color: var(--cream); 
+    color: var(--espresso); 
+    padding: 15px 2%; 
+}
+
+/* Breadcrumb */
+.manage-breadcrumb a {
+    color: var(--olive);
+}
+
+/* Titles */
+.manage-main h2 {
+    margin: 15px 5%;
+}
+.manage-main h3 {
+    margin: 8px 0;
+}
+
+/* Table */
+.team-form table {
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+}
+.team-form th {
+    padding: 10px;
+}
+.team-form td {
+    padding: 8px;
+}
+.team-form img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Delete Button */
+.delete-button input {
+    width: 250px;
+    padding: 12px;
+    background-color: var(--olive);
+    color: var(--white);
+    border: 1px solid var(--olive);
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Add Instructor Section */
+.add-instructor-section {
+    border-top: 2px solid var(--olive);
+    padding: 15px 5%;
+    margin-top: 30px;
+}
+
+.instructor-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 2%;
+}
+
+.instructor-left,
+.instructor-right {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+.instructor-form input,
+.instructor-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--olive);
+    background-color: var(--white);
+    margin-bottom: 8px;
+}
+
+.instructor-form textarea {
+    height: 60px;
+}
+
+/* Add Button */
+.add-button input {
+    background-color: var(--olive);
+    color: var(--white);
+    border: 1px solid var(--olive);
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+ 
+</style> 
+</head> 
+ 
+<body> 
+
+<header> 
+    <div class="logo"> 
+        <img src="images/loogo.png" alt="logo"> 
+        <h2>Taste Journey</h2> 
+    </div> 
+</header> 
+ 
+<!-- Navigation Bar --> 
+ 
+<div class="navbar"> 
+    <nav> 
+        <a href="Home.html">Home</a> | 
+        <a href="Offering.html">Club Offerings</a> | 
+        <a href="about_us.html">About us</a> | 
+        <a href="">Member Dashboard</a> | 
+        <a href="Club Manager Dashboard.html">Manager Dashboard</a> 
+    </nav> 
+</div> 
+ 
+<main class="manage-main"> 
+ 
+    <!-- Breadcrumb --> 
+ 
+    <div class="manage-breadcrumb"> 
+        <a href="Club Manager Dashboard.html">&lt;Back</a> 
+    </div> 
+ 
+ 
+    <!-- First Section: Manage Team --> 
+ 
+    <section> 
+ 
+        <h2>Manage Team</h2> 
+ 
+        <form class="team-form"> 
+ 
+            <table> 
+ 
+                <thead> 
+                    <tr> 
+                        <th>Select</th> 
+                        <th>Image</th> 
+                        <th>Name</th> 
+                    </tr> 
+                </thead> 
+ 
+                <tbody> 
+ 
+                    <tr> 
+                        <td> 
+                            <input type="checkbox" name="deleteInstructor" 
+                                   value="1"> 
+                        </td> 
+ 
+                        <td> 
+                            <img src="Alya_images/Khalid.jpg" alt="Chef image"> 
+                        </td> 
+ 
+                        <td>Khalid</td> 
+                    </tr> 
+ 
+                    <tr> 
+                        <td> 
+                            <input type="checkbox" name="deleteInstructor" 
+                                   value="2"> 
+                        </td> 
+ 
+                        <td> 
+                            <img src="Alya_images/Manal.jpg" alt="Chef image"> 
+                        </td> 
+ 
+                        <td>Manal</td> 
+                    </tr> 
+ 
+                    <tr> 
+                        <td> 
+                            <input type="checkbox" name="deleteInstructor" 
+                                   value="3"> 
+                        </td> 
+ 
+                        <td> 
+                            <img src="Alya_images/Sara.jpg" alt="Chef image"> 
+                        </td> 
+ 
+                        <td>Sara</td> 
+                    </tr> 
+ 
+                </tbody> 
+ 
+            </table> 
+ 
+            <div class="delete-button"> 
+                <input type="submit" value="Delete Selected"> 
+            </div> 
+ 
+        </form> 
+ 
+    </section> 
+ 
+ 
+    <!-- Second Section: Add New Instructor --> 
+ 
+    <section class="add-instructor-section"> 
+ 
+        <h2>Add New Instructor</h2> 
+ 
+        <form class="instructor-form"> 
+ 
+            <!-- Left Column --> 
+ 
+            <div class="instructor-left"> 
+ 
+                <label for="instructor-name">Name</label> 
+                <input type="text" id="instructor-name" 
+                       name="name" required> 
+ 
+                <label for="instructor-dob">Date Of Birth</label> 
+                <input type="date" id="instructor-dob" 
+                       name="dateOfBirth" required> 
+ 
+                <label for="instructor-education">Education</label> 
+                <input type="text" id="instructor-education" 
+                       name="education" required> 
+ 
+                <label for="instructor-expertise">Expertise</label> 
+                <input type="text" id="instructor-expertise" 
+                       name="expertise" required> 
+ 
+                <div class="add-button"> 
+                    <input type="submit" value="Add"> 
+                </div> 
+ 
+            </div> 
+ 
+ 
+            <!-- Right Column --> 
+ 
+            <div class="instructor-right"> 
+ 
+                <label for="instructor-photo">Photo</label> 
+                <input type="file" id="instructor-photo" 
+                       name="photo" accept="image/*" required> 
+ 
+                <label for="instructor-email">Email</label> 
+                <input type="email" id="instructor-email" 
+                       name="email" required> 
+ 
+                <label for="instructor-skills">Skills</label> 
+                <input type="text" id="instructor-skills" 
+                       name="skills" required> 
+ 
+                <label for="instructor-about">About Me</label> 
+                <textarea id="instructor-about" 
+                          name="about"></textarea> 
+ 
+            </div> 
+ 
+        </form> 
+ 
+    </section> 
+ 
+</main> 
+
+
+
+<footer> 
+ 
+    <div class="footer-content"> 
+ 
+        <div class="footer-logo"> 
+            <img src="images/loogo.png" alt=""> 
+            <span>Taste Journey</span> 
+        </div> 
+ 
+        <div class="footer-Email"> 
+            <strong>Contact</strong><br> 
+            <a href="mailto:info@TasteJourny.edu"> 
+                info@TasteJourny.edu 
+            </a> 
+        </div> 
+ 
+        <div class="Social"> 
+            <strong>Follow us</strong> 
+ 
+            <div class="Social-img"> 
+ 
+                <a href="#"> 
+                    <img src="images/instagram.png" alt=""> 
+                </a> 
+ 
+                <a href="#"> 
+                    <img src="images/twitter.png" alt=""> 
+                </a> 
+ 
+                <a href="#"> 
+                    <img src="images/linkedin.png" alt=""> 
+                </a> 
+ 
+            </div> 
+        </div> 
+ 
+    </div> 
+ 
+    <div class="copyright"> 
+        &copy; 2026 Taste Journey 
+    </div> 
+ 
+</footer> 
+</body> 
+</html> 
