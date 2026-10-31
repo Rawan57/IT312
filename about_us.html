@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taste Journey - About Us</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         * {
             box-sizing: border-box;
         }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             color: #222;
-            background-color: #ffffff;
+            background-color: #f7f1e5;
         }
-        a { 
-            text-decoration: none; 
-            color: #333; 
+
+        a {
+            text-decoration: none;
+            color: #333;
         }
 
         /* Header Styles */
@@ -27,15 +31,18 @@
             padding: 15px 6%;
             border-bottom: 2px solid black;
         }
+
         .logo {
             display: flex;
             align-items: center;
         }
+
         .logo img {
             width: 70px;
             height: 70px;
             margin-right: 15px;
         }
+
         .logo h2 {
             margin: 0;
             font-size: 24px;
@@ -47,8 +54,10 @@
             justify-content: center;
             padding: 15px;
             border-bottom: 1px solid black;
-            background-color: #ffffff;
+            background-color: #f7f1e5;
+            ;
         }
+
         .navbar nav a {
             text-decoration: none;
             color: black;
@@ -61,24 +70,28 @@
             max-width: 1100px;
             margin: auto;
             padding: 0 25px;
-        }                   
+        }
 
         /* Breadcrumb Styles */
         .breadcrumb {
-            padding:15px 15px;
+            padding: 15px 15px;
             font-size: 14px;
         }
+
         .breadcrumb a {
             color: #45451f;
             text-decoration: none;
         }
+
         .breadcrumb a:hover {
             text-decoration: underline;
         }
+
         .breadcrumb .separator {
-            margin: 0 8px;
+            margin: 0 0px;
             color: #999;
         }
+
         .breadcrumb .current-page {
             color: #666;
             font-weight: normal;
@@ -88,10 +101,12 @@
         .mission {
             margin-bottom: 40px;
         }
+
         h2 {
             font-size: 25px;
             margin-bottom: 15px;
         }
+
         .mission p {
             max-width: 650px;
             line-height: 1.6;
@@ -102,6 +117,7 @@
         .team {
             margin-bottom: 55px;
         }
+
         .team-list {
             display: flex;
             flex-wrap: wrap;
@@ -110,15 +126,17 @@
             margin-bottom: 40px;
             padding: 10px 0;
         }
+
         .team .card {
             width: 31%;
             border: 1px solid black;
             border-radius: 18px;
             padding: 12px;
             overflow: hidden;
-            background-color: white;
+            background-color: f7f1e5;
             text-align: center;
         }
+
         .team .food-img {
             width: 100%;
             height: 250px;
@@ -126,16 +144,19 @@
             object-fit: cover;
             display: block;
         }
+
         .team .card a {
             text-decoration: none;
             display: inline-block;
         }
+
         .team .card h2 {
             font-size: 18px;
             margin: 18px 0 5px 0;
             text-decoration: underline;
             color: black;
         }
+
         .team .card a:hover h2 {
             color: #777;
         }
@@ -145,6 +166,7 @@
             max-width: 600px;
             margin-bottom: 60px;
         }
+
         .join-button {
             display: inline-block;
             padding: 10px 25px;
@@ -158,23 +180,28 @@
             cursor: pointer;
             list-style: none;
         }
+
         .join-button::-webkit-details-marker {
             display: none;
         }
+
         .join-form {
             max-width: 600px;
             margin-top: 10px;
         }
+
         .form-group {
             display: flex;
             align-items: center;
             gap: 15px;
             margin-bottom: 14px;
         }
+
         .form-group label {
             width: 140px;
             font-weight: bold;
         }
+
         .form-group input {
             flex: 1;
             min-width: 0;
@@ -183,6 +210,7 @@
             border-radius: 5px;
             font-size: 15px;
         }
+
         .submit-button {
             display: block;
             margin: 20px auto;
@@ -196,185 +224,164 @@
             cursor: pointer;
         }
 
-        /* Footer Styles */
-        .footer-content {
-            display: flex;
-            background-color: #e0e0e0;
-            border: 1px solid black;
-            align-items: center;
-            justify-content: space-between;
-            padding: 30px;
-            width: 100%;
-        }
-        .footer-Email {
-            text-align: center;
-        }
-        .footer-logo {
-            display: flex;
-            align-items: center;
-        }
-        .footer-logo img {
-            width: 40px;
-            height: 40px;
-            margin-right: 12px;
-        }
-        .Social-img img {
-            margin-right: 2px;
-            width: 20px;
-            height: 20px;
-        }
-        .copyright {
-            background-color: #e0e0e0;
-            border: 1px solid black;
-            border-top: none;
-            text-align: center;
-            padding: 12px;
-            width: 100%;
-        }
 
-        
+
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .team .card { width: 48%; }
+            .team .card {
+                width: 48%;
+            }
         }
+
         @media (max-width: 600px) {
-            .container { padding: 0 15px; }
-            .footer-content { flex-direction: column; gap: 20px; text-align: center; }
-            .team .card { width: 100%; }
-            .form-group { flex-direction: column; align-items: stretch; gap: 6px; }
-            .form-group label { width: auto; }
+            .container {
+                padding: 0 15px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .team .card {
+                width: 100%;
+            }
+
+            .form-group {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 6px;
+            }
+
+            .form-group label {
+                width: auto;
+            }
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <div class="logo">
-        <img src="images/loogo.png" alt="logo">
-        <h2>Taste Journey</h2>
+    <header>
+        <div class="logo">
+            <img src="images/loogo.png" alt="logo">
+            <h2>Taste Journey</h2>
+        </div>
+    </header>
+
+    <div class="navbar">
+        <nav>
+            <a href="Home.html">Home</a> |
+            <a href="Offering.html">Club Offerings</a> |
+            <a href="about_us.html">About us</a> |
+            <a href="club_member_dashboard.html">Member Dashboard</a> |
+            <a href="">Manager Dashboard</a>
+        </nav>
     </div>
-</header>
-
-<div class="navbar">
-    <nav>
-        <a href="Home.html">Home</a> |
-        <a href="">Club Offerings</a> |
-        <a href="">About us</a> |
-        <a href="">Member Dashboard</a> |
-        <a href="">Manager Dashboard</a>
-    </nav>
-</div> 
 
 
- <div class="breadcrumb">
+    <div class="breadcrumb">
         <a href="Home.html">Home</a>
         <span class="separator">&gt;</span>
-        <span class="current-page">About Us</span> 
+        <span class="current-page">About Us</span>
     </div>
 
-<main class="container">
-   
+    <main class="container">
 
-    <section class="mission">
-        <h2>Our Mission</h2>
-        <p>
-            Our cooking club aims to help people develop cooking skills,
-            discover new interests, express their creativity, and connect
-            with others through cooking experiences.
-        </p>
-    </section>
 
-    <section class="team">
-        <h2>Our Team</h2>
-        <div class="team-list">
-            <div class="card">
-                <img src="Alya_images/Khalid.jpg" alt="Chef Khalid" class="food-img">
-                <a href="Khalid.html" class="chef-link">
-                    <h2>Chef Khalid</h2>
-                </a>
+        <section class="mission">
+            <h2>Our Mission</h2>
+            <p>
+                Our cooking club aims to help people develop cooking skills,
+                discover new interests, express their creativity, and connect
+                with others through cooking experiences.
+            </p>
+        </section>
+
+        <section class="team">
+            <h2>Our Team</h2>
+            <div class="team-list">
+                <div class="card">
+                    <img src="Alya_images/Khalid.jpg" alt="Chef Khalid" class="food-img">
+                    <a href="Khalid.html" class="chef-link">
+                        <h2>Chef Khalid</h2>
+                    </a>
+                </div>
+                <div class="card">
+                    <img src="Alya_images/Sara.jpg" alt="Chef Sara" class="food-img">
+                    <a href="Sara.html" class="chef-link">
+                        <h2>Chef Sara</h2>
+                    </a>
+                </div>
+                <div class="card">
+                    <img src="Alya_images/Manal.jpg" alt="Chef Manal" class="food-img">
+                    <a href="Manal.html" class="chef-link">
+                        <h2>Chef Manal</h2>
+                    </a>
+                </div>
             </div>
-            <div class="card">
-                <img src="Alya_images/Sara.jpg" alt="Chef Sara" class="food-img">
-                <a href="Sara.html" class="chef-link">
-                    <h2>Chef Sara</h2>
-                </a>
-            </div>
-            <div class="card">
-                <img src="Alya_images/Manal.jpg" alt="Chef Manal" class="food-img">
-                <a href="Manal.html" class="chef-link">
-                    <h2>Chef Manal</h2>
-                </a>
+        </section>
+
+        <details class="join-details">
+            <summary class="join-button">Join Our Team</summary>
+            <form class="join-form" action="#" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="photo">Photo</label>
+                    <input type="file" id="photo" name="photo" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="expertise">Expertise</label>
+                    <input type="text" id="expertise" name="expertise" required>
+                </div>
+                <div class="form-group">
+                    <label for="skills">Skills</label>
+                    <input type="text" id="skills" name="skills" required>
+                </div>
+                <div class="form-group">
+                    <label for="education">Education</label>
+                    <input type="text" id="education" name="education" required>
+                </div>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </details>
+
+    </main>
+
+    <footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="images/loogo.png" alt="">
+            <span>Taste Journey</span>
+        </div>
+        <div class="footer-Email">
+            <strong>Contact</strong><br>
+            <a href="mailto:info@TasteJourny.edu">info@TasteJourny.edu</a>
+        </div>
+        <div class="Social">
+            <strong>Follow us</strong> 
+            <div class="Social-img">
+                <a href="#"><img src="images/instagram.png" alt=""></a>
+                <a href="#"><img src="images/twitter.png" alt=""></a>
+                <a href="#"><img src="images/linkedin.png" alt=""></a>
             </div>
         </div>
-    </section>
-
-    <details class="join-details">
-        <summary class="join-button">Join Our Team</summary>
-        <form class="join-form" action="#" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="photo">Photo</label>
-                <input type="file" id="photo" name="photo" accept="image/*" required>
-            </div>
-            <div class="form-group">
-                <label for="dob">Date of Birth</label>
-                <input type="date" id="dob" name="dob" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="expertise">Expertise</label>
-                <input type="text" id="expertise" name="expertise" required>
-            </div>
-            <div class="form-group">
-                <label for="skills">Skills</label>
-                <input type="text" id="skills" name="skills" required>
-            </div>
-            <div class="form-group">
-                <label for="education">Education</label>
-                <input type="text" id="education" name="education" required>
-            </div>
-            <button type="submit" class="submit-button">Submit</button>
-        </form>
-    </details>
-</main>
-
-<footer>
-<div class="footer-content">
-
-<div class="footer-logo">
-      <img src="images/loogo.png" alt="">
-    <span>Taste Journey</span>
-   
-</div>
-<div class="footer-Email">
-    <strong>Contact</strong><br>
-    <a href="mailto:info@TasteJourny.edu">info@TasteJourny.edu</a>
-</div>
-<div class="Social">
-   <strong>Follow us</strong> 
-   <div class="Social-img">
-    <a href="#">
-        <img src="images/instagram.png" alt="">
-   </a>
-      <a href="#">
-        <img src="images/twitter.png" alt="">
-      </a>
-      <a href="#">
-        <img src="images/linkedin.png" alt="">
-      </a>
-   </div>
-</div>
-</div>
-
-<div class="copyright">
-    &copy; 2026 Taste Journey
-</div>
-
+    </div>
+    <div class="copyright">
+        &copy; 2026 Taste Journey
+    </div>
 </footer>
+</body>
