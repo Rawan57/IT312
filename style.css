@@ -1,5 +1,11 @@
 /* Taste Journey - Brand Colors */ 
-:root { --cream: #F7F1E5; --olive: #45451F; --gold: #A6814C; --sand: #E8DDC6; --espresso: #292719; --white: #FFFFFF; }
+:root { 
+    --cream: #F7F1E5; 
+    --olive: #45451F; 
+    --gold: #A6814C; 
+    --sand: #E8DDC6; 
+    --espresso: #292719; 
+    --white: #FFFFFF; }
 /* Global Styles */
 *{ 
     box-sizing: border-box;
@@ -8,11 +14,13 @@ body {
      margin: 0; font-family: Arial, sans-serif; 
      font-size: 16px; 
      background-color: var(--cream);
-      color: var(--espresso); }
+      color: var(--espresso);
+     }
 /* Main Headings */
  h1, h2 {
      font-family: Georgia, serif; 
-     color: var(--olive); }
+     color: var(--olive);
+     }
 h1 { 
     font-size: 32px; 
 }
