@@ -35,6 +35,7 @@ align-items: center;
     border-radius: 20px;
     background-color: white;
      margin-bottom: 10px;
+     color:var(--olive)
 }
 .offerings{
     display: flex;
@@ -45,7 +46,7 @@ align-items: center;
 }
 .card{
     width: 30%;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 18px;
    padding: 5px;
    overflow: hidden;
@@ -71,17 +72,43 @@ align-items: center;
 
 .card .chef {
     font-size: 11px;
+    margin-top:0;
+    font-weight: bold;
 }
-
+.card .chef img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid black;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-top: -20px;
+    position: relative;
+}
 .card .location {
     margin-top: 20px;
 }
-
+.heart{
+    font-size: 30px;
+    cursor: pointer;
+}
 .card-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 5px;
+}
+.location img ,.price img {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.card .location,
+.card .price {
+    font-size: 11px;
+    font-weight: bold;
 }
 
 </style>
@@ -91,7 +118,7 @@ align-items: center;
 <body>
 <header>
 <div class="logo">
-    <img src="images/logo.jpg" alt="logo">
+    <img src="images/loogo.png" alt="logo">
       <h2>Taste Journey</h2>
 
 
@@ -118,84 +145,97 @@ align-items: center;
 
 <div class="filters">
 <div class="filter-buttons">  
-    <button >All</button>
-    <button >Workshops</button>
-    <button >Classes</button>
-    <button >Activities</button>
+    <button>All</button>
+    <button>Workshops</button>
+    <button>Classes</button>
+    <button>Activities</button>
 </div>
 <div class="sort">
     <label for="sort">Sort by</label>
-    <select id="sort">
-        <option >Price</option>
-        <option >Name</option>
-    </select>
+   <select id="sort" name="sort">
+    <optgroup label="Price">
+        <option value="low">Low to High</option>
+        <option value="high">High to Low</option>
+    </optgroup>
+
+    <optgroup label="Name">
+        <option value="az">A-Z</option>
+        <option value="za">Z-A</option>
+    </optgroup>
+</select>
 </div>
 </div>
 <div class="offerings">
  <div class="card">
         <img class="food-img" src="images/table.jpg" alt="Table Tales">
-        <p class="chef">● Chef Name</p>
-        <h2>Table Tales</h2>
+        <p class="chef"> 
+            <img src="images/chef1.jpg" alt="Chef"> Chef Khled</p>
+        <h2><a href="Table Details.html">Table Tales</a></h2>
         <p>Japanese Table Styling Workshop</p>
-        <p class="location">Taste Journey Studio</p>
+        <p class="location"><img src="images/location-pin.png" alt="Location"> Taste Journey Studio</p>
         <div class="card-bottom">
-            <span>100 SR</span>
-            <span>♡</span>
+            <span class="price"><img src="images/money.png" alt="Price"> 100 SR</span>
+            <span class="heart">♡</span>
         </div>
     </div>
     <div class="card">
         <img class="food-img" src="images/sushi.jpg" alt="Japanese Cuisine">
-        <p class="chef">● Chef Name</p>
-        <h2>The Art of Japanese Cuisine</h2>
+        <p class="chef"> 
+            <img src="images/chef3.jpg" alt="Chef"> Chef Manal</p>
+        <h2><a href="JapaneseDetails.html">The Art of Japanese Cuisine</a></h2>
         <p>Japanese Cooking Class</p>
-        <p class="location">Taste Journey Studio</p>
+        <p class="location"><img src="images/location-pin.png" alt="Location"> Taste Journey Studio</p>
         <div class="card-bottom">
-            <span>100 SR</span>
-            <span>♡</span>
+            <span class="price"><img src="images/money.png" alt="Price"> 120 SR</span>
+            <span class="heart">♡</span>
         </div>
     </div>
      <div class="card">
         <img class="food-img" src="images/basket.jpg" alt="Mystery Basket">
-        <p class="chef">● Chef Name</p>
-        <h2>Mystery Basket</h2>
+        <p class="chef"> 
+            <img src="images/chef2.jpg" alt="Chef"> Chef Sara</p>
+        <h2><a href="basketDetails.html">Mystery Basket</a></h2>
         <p>Creative Cooking Activity</p>
-        <p class="location">Taste Journey Studio</p>
+        <p class="location"><img src="images/location-pin.png" alt="Location"> Taste Journey Studio</p>
         <div class="card-bottom">
-            <span>100 SR</span>
-            <span>♡</span>
+            <span class="price"><img src="images/money.png" alt="Price"> 180 SR</span>
+            <span class="heart">♡</span>
         </div>
     </div>
     <div class="card">
-        <img class="food-img" src="images/pasta.jpg" alt="Pasta and Prosecco">
-        <p class="chef">● Chef Name</p>
-        <h2>Pasta &amp; Prosecco</h2>
+        <img class="food-img" src="images/pasta.jpg" alt="Italian Pasta">
+        <p class="chef"> 
+            <img src="images/chef1.jpg" alt="Chef"> Chef Khaled</p>
+        <h2><a href="pastaDetails.html">Italian Pasta </a></h2>
         <p>Italian Pasta Making Workshop</p>
-        <p class="location">Taste Journey Studio</p>
+        <p class="location"><img src="images/location-pin.png" alt="Location"> Taste Journey Studio</p>
         <div class="card-bottom">
-            <span>100 SR</span>
-            <span>♡</span>
+            <span class="price"><img src="images/money.png" alt="Price"> 165 SR</span>
+               <span class="heart">♡</span>
         </div>
     </div>
     <div class="card">
         <img class="food-img" src="images/world.jpg" alt="Passport to Flavor">
-        <p class="chef">● Chef Name</p>
+        <p class="chef"> 
+            <img src="images/chef2.jpg" alt="Chef"> Chef Sara</p>
         <h2>Passport to Flavor</h2>
         <p>Cooking Activity</p>
-        <p class="location">Taste Journey Studio</p>
+        <p class="location"><img src="images/location-pin.png" alt="Location">  Taste Journey Studio</p>
         <div class="card-bottom">
-            <span>100 SR</span>
-            <span>♡</span>
+            <span class="price"><img src="images/money.png" alt="Price"> 180 SR</span>
+              <span class="heart">♡</span>
         </div>
     </div>
      <div class="card">
         <img class="food-img" src="images/maxican.jpg" alt="Mexican Flavors">
-        <p class="chef">● Chef Name</p>
+        <p class="chef"> 
+            <img src="images/chef3.jpg" alt="Chef"> Chef Manal</p>
         <h2>Mexican Flavors</h2>
         <p>Mexican Cooking Class</p>
-        <p class="location">Taste Journey Studio</p>
+        <p class="location"><img src="images/location-pin.png" alt="Location"> Taste Journey Studio</p>
         <div class="card-bottom">
-            <span>100 SR</span>
-            <span>♡</span>
+            <span class="price"><img src="images/money.png" alt="Price"> 120 SR</span>
+            <span class="heart">♡</span>
         </div>
     </div>
 </div>

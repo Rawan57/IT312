@@ -1,258 +1,120 @@
-*{
+/* Taste Journey - Brand Colors */ 
+:root { 
+    --cream: #F7F1E5; 
+    --olive: #45451F; 
+    --gold: #A6814C; 
+    --sand: #E8DDC6; 
+    --espresso: #292719; 
+    --white: #FFFFFF; }
+/* Global Styles */
+*{ 
     box-sizing: border-box;
+ }
+body {
+     margin: 0; font-family: Arial, sans-serif; 
+     font-size: 16px; 
+     background-color: var(--cream);
+      color: var(--espresso);
+     }
+/* Main Headings */
+ h1, h2 {
+     font-family: Georgia, serif; 
+     color: var(--olive);
+     }
+h2 a{
+            text-decoration: none;
+            color: var(--olive); 
+      }
+h1 { 
+    font-size: 32px; 
 }
-
-body{
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-header{
-    display: flex;
-    align-items: center;
-    padding: 15px 6%;
-    border-bottom: 2px solid black;
-}
-.logo{
-    display: flex;
-    align-items: center;
-  
-}
-.logo img{
+h2 { font-size: 25px;
+ }
+/* Header */ 
+header {
+     display: flex; 
+     align-items: center;
+      padding: 15px 6%; 
+      border-bottom: 2px solid var(--olive);
+     }
+.logo { 
+    display: flex; 
+    align-items: center; }
+.logo img { 
     width: 70px;
-    height: 70px;
-     margin-right: 15px;
-}
-.logo h2{
+     height: 70px; 
+     margin-right: 15px; }
+.logo h2 { 
     margin: 0;
-    font-size: 24px;
-}
-.navbar{
-    display: flex;
+     font-size: 24px; }
+/* Navbar */ 
+.navbar { 
+    display: flex; 
     justify-content: center;
-    padding: 15px;
-    border-bottom: 1px solid black;
-}
-.navbar a{
-    text-decoration: none;
-    color: black;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-
-
-.footer-content{
-    display: flex;
-    background-color: #e0e0e0;
-    border: 1px solid black;
-  align-items: center;
- justify-content: space-between;
-    padding: 30px;
- 
-
-
-}
-.footer-Email{
-    text-align: center;
-}
-.footer-logo{
-    display: flex;
-    align-items: center;
-   
-}
-.footer-logo img{
-     width: 40px;
-    height: 40px;
-  
-   margin-right: 12px;
-}
-.Social-img img {
-      margin-right:2px;
-      width:20px;
-    height: 20px;
-     }
-     .Social-img a{
-
-        text-decoration:none;
-     }
- 
-     
-      
-.copyright {
-    background-color:#e0e0e0;
-    border: 1px solid black;
-    text-align: center;
-    padding: 12px;
-     }
-
-     /* Offering Page */
-   .search {
-    margin: 25px 0;
-}
-.search input {
-    width: 300px;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 20px;
-}
-
-.sort{
+     padding: 15px;
+      border-bottom: 1px solid var(--olive); }
+.navbar a {
+     text-decoration: none; 
+     color: var(--olive);
+     font-size: 14px; 
+     font-weight: bold; }
+/* Buttons */
+ button, .button {
+     background-color: var(--olive); 
+     color: var(--white); 
+     border: 1px solid var(--olive); 
+     border-radius: 10px; 
+     padding: 12px 20px; 
+     font-family: Arial, sans-serif; 
+     font-weight: bold; 
+     cursor: pointer; }
+/* Input Fields */ 
+input, select, textarea {
+     background-color: var(--white);
+      color: var(--espresso); 
+      border: 1px solid var(--olive);
+       border-radius: 10px; 
+       padding: 10px; 
+       font-family: Arial, sans-serif; }
+/* Tables */
+ table {
+     width: 80%; 
+     border-collapse: collapse; }
+th {
+     background-color: var(--olive); 
+     color: var(--white); padding: 15px; }
+td {
+     background-color: var(--white); 
+     color: var(--espresso);
+      padding: 14px; 
+      border: 1px solid var(--sand); }
+tr:nth-child(even) td { 
+    background-color: var(--cream); }
+/* Footer */
+ .footer-content { 
+    display: flex; 
+    background-color: var(--sand);
+     border: 1px solid var(--olive);
+      align-items: center;
+       justify-content: space-between;
+        padding: 30px; }
+.footer-Email { 
+    text-align: center; }
+.footer-logo {
      display: flex;
-    gap:10px;
-    align-items:center;
-}   
-.filters{
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-.filter-buttons {
-    display: flex;
-    gap: 30px;
-    
-}
-
-.filter-buttons button{
-    padding: 8px 30px;
-    border: 1px solid black;
-    border-radius: 20px;
-    background-color: white;
-     margin-bottom: 10px;
-}
-.offerings{
-    display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
-    gap: 25px;
-   margin-bottom: 40px;
-}
-.card{
-    width: 30%;
-    border: 1px solid black;
-    border-radius: 18px;
-   padding: 5px;
-   overflow: hidden;
-}
-.food-img {
-    width: 100%;
-    height: 150px;
-    border-radius: 14px;
-    object-fit: cover;
-    display: block;
-}
-
-.card h2 {
-    font-size: 17px;
-    margin: 5px 0;
-   text-decoration:underline; 
-}
-
-.card p {
-    font-size: 12px;
-    margin: 5px 0;
-}
-
-.card .chef {
-    font-size: 11px;
-}
-
-.card .location {
-    margin-top: 20px;
-}
-
-.card-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 5px;
-}
-
-/* Offering Details Page */
-
-.breadcrumb {
-    padding: 10px 0;
-    margin: 0;
-    font-size: 14px;
-}
-
-.breadcrumb a {
-    color: black;
-    text-decoration: none;
-}
-
-.details-image {
-    width: 100%;
-    height: 250px;
-    object-fit:cover;
-}
-
-.details-content {
-    padding: 20px 6%;
-}
-
-.back {
-    color: black;
-    font-size: 14px;
-}
-
-.details-content h1 {
-    font-size: 30px;
-    margin-bottom: 5px;
-}
-
-.details-content p {
-    font-size: 14px;
-}
-
-.details-info {
-    display: flex;
-    justify-content: space-between;
-    margin: 25px 0 40px;
-    font-size: 13px;
-}
-
-.about-offering {
-    margin-bottom: 35px;
-}
-
-.about-offering p {
-    max-width: 600px;
-}
-
-.ingredients {
-    margin-bottom: 35px;
-}
-
-.ingredient-list {
-    display: flex;
-    gap: 20px;
-}
-
-.ingredient-list span {
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 8px 15px;
-    background-color: #e0e0e0;
-}
-
-.learning {
-    margin-bottom: 40px;
-}
-
-.learning ul {
-    padding-left: 25px;
-}
-
-.learning li {
-    margin-bottom: 8px;
-}
-.details-info span {
-    display: flex;
-    align-items: center;
-}
-
-.details-info img {
-    width: 18px;
-    height: 18px;
-    margin-right: 6px;
-}
+     align-items: center; }
+.footer-logo img { 
+    width: 40px;
+     height: 40px;
+      margin-right: 12px; }
+.Social-img img { 
+    margin-right: 2px;
+     width: 20px;
+      height: 20px; }
+.Social-img a { 
+    text-decoration: none; }
+.copyright {
+     background-color: var(--sand); 
+     border: 1px solid var(--olive);
+      text-align: center; 
+      padding: 12px; }
