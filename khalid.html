@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,12 +16,13 @@
             margin: 0;
             padding: 0;
             color: #222;
-            background-color: #ffffff;
+            background-color: #f7f1e5;
+            ;
         }
 
-        a { 
-            text-decoration: none;  
-            color: #333; 
+        a {
+            text-decoration: none;
+            color: #333;
         }
 
         header {
@@ -29,15 +31,18 @@
             padding: 15px 6%;
             border-bottom: 2px solid black;
         }
+
         .logo {
             display: flex;
             align-items: center;
         }
+
         .logo img {
             width: 70px;
             height: 70px;
             margin-right: 15px;
         }
+
         .logo h2 {
             margin: 0;
             font-size: 24px;
@@ -49,8 +54,10 @@
             justify-content: center;
             padding: 15px;
             border-bottom: 1px solid black;
-            background-color: #ffffff;
+            background-color: #f7f1e5;
+            ;
         }
+
         .navbar nav a {
             text-decoration: none;
             color: black;
@@ -62,21 +69,26 @@
             padding: 8px 0px 10px 10px;
             font-family: Arial, sans-serif;
         }
+
         .breadcrumb {
             font-size: 14px;
             margin-bottom: 10px;
         }
+
         .breadcrumb a {
             color: #45451f;
             text-decoration: none;
         }
+
         .breadcrumb a:hover {
             text-decoration: underline;
         }
+
         .breadcrumb .separator {
             margin: 0 0px;
             color: #999;
         }
+
         .breadcrumb .current-page {
             color: #666;
             font-weight: normal;
@@ -86,10 +98,11 @@
             display: inline-block;
             color: #333;
             font-size: 15px;
-           /* font-weight: bold;*/
+            /* font-weight: bold;*/
             margin-top: 0px;
             text-decoration: underline;
         }
+
         .back-link:hover {
             text-decoration: underline;
             color: #777;
@@ -152,7 +165,7 @@
             margin-bottom: 5px;
         }
 
-        .footer-content {
+        /*.footer-content {
             display: flex;
             background-color: #e0e0e0;
             border: 1px solid black;
@@ -161,14 +174,15 @@
             padding: 30px;
             width: 100%;
         }
-        .footer-Email {
+       .footer-Email {
             text-align: center;
         }
         .footer-logo {
             display: flex;
             align-items: center;
-        }
-        .footer-logo img {
+        }*/
+
+        /* .footer-logo img {
             width: 40px;
             height: 40px;
             margin-right: 12px;
@@ -185,7 +199,7 @@
             text-align: center;
             padding: 12px;
             width: 100%;
-        }
+        }*/
 
         /* Responsive Design */
         @media (max-width: 600px) {
@@ -212,112 +226,125 @@
                 height: 110px;
             }
 
-            .footer-content {
+            /*  .footer-content {
                 flex-direction: column;
                 gap: 20px;
                 text-align: center;
-            }
+            }*/
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <div class="logo">
-        <img src="images/loogo.png" alt="logo">
-        <h2>Taste Journey</h2>
-    </div>
-</header>
+    <header>
+        <div class="logo">
+            <img src="images/loogo.png" alt="logo">
+            <h2>Taste Journey</h2>
+        </div>
+    </header>
 
 <div class="navbar">
     <nav>
-        <a href="Home.html">Home</a> | 
-        <a href="Offering.html">Club Offerings</a> | 
-        <a href="about_us.html">About us</a> | 
-        <a href="club_member_dashboard.html">Member Dashboard</a> | 
-        <a href="Club Manager Dashboard.html">Manager Dashboard</a> 
+        <a href="index.html">Home</a> |
+        <a href="club_offerings.html">Club Offerings</a> |
+        <a href="about_us.html">About us</a> |
+        <a href="member_dashboard.html">Member Dashboard</a> |
+        <a href="manager_dashboard.html">Manager Dashboard</a>
     </nav>
 </div> 
 
-<div class="breadcrumb-container">
-    <div class="breadcrumb">
-        <a href="index.html">Home</a>
-        <span class="separator">&gt;</span>
-        <a href="about_us.html">About Us</a>
-        <span class="separator">&gt;</span>
-        <span class="current-page">Our Team</span> 
+    <div class="breadcrumb-container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="separator">&gt;</span>
+            <a href="about_us.html">About Us</a>
+            <span class="separator">&gt;</span>
+            <span class="current-page">Our Team</span>
+        </div>
+
+        <a href="about_us.html" class="back-link">&lt; Back</a>
     </div>
-    
-    <a href="about_us.html" class="back-link">&lt; Back</a>
-</div>
 
-<main class="container">
+    <main class="container">
 
-    <table class="profile-table">
-        <tr>
-            <th colspan="3" class="name-cell">
-                Chef Khalid
-            </th>
-        </tr>
-        <tr>
-            <td rowspan="5" class="photo-cell">
-                <img src="Alya_images/Khalid.jpg" alt="Chef Khalid">
-            </td>
-            <td class="label-cell">Date of Birth</td>
-            <td>1/1/1995</td>
-        </tr>
-        <tr>
-            <td class="label-cell">Email</td>
-            <td>chef_khalid1223@gmail.com</td>
-        </tr>
-        <tr>
-            <td class="label-cell">Area of Expertise</td>
-            <td>Italian Cooking</td>
-        </tr>
-        <tr>
-            <td class="label-cell">Skills</td>
-            <td>Baking, Grilling</td>
-        </tr>
-        <tr>
-            <td class="label-cell">Education</td>
-            <td>Culinary Arts</td>
-        </tr>
-    </table>
+        <table class="profile-table">
+            <tr>
+                <th colspan="3" class="name-cell">
+                    Chef Khalid
+                </th>
+            </tr>
+            <tr>
+                <td rowspan="5" class="photo-cell">
+                    <img src="Alya_images/Khalid.jpg" alt="Chef Khalid">
+                </td>
+                <td class="label-cell">Date of Birth</td>
+                <td>1/1/1995</td>
+            </tr>
+            <tr>
+                <td class="label-cell">Email</td>
+                <td>chef_khalid1223@gmail.com</td>
+            </tr>
+            <tr>
+                <td class="label-cell">Area of Expertise</td>
+                <td>Italian Cooking</td>
+            </tr>
+            <tr>
+                <td class="label-cell">Skills</td>
+                <td>Baking, Grilling</td>
+            </tr>
+            <tr>
+                <td class="label-cell">Education</td>
+                <td>Culinary Arts</td>
+            </tr>
+        </table>
 
-    <section class="about-me">
-        <h2>About Me</h2>
-        <p>
-            I am a passionate chef with experience in Italian cuisine.
-            I enjoy sharing my cooking knowledge and helping others
-            discover new cooking techniques.
-        </p>
-    </section>
+        <section class="about-me">
+            <h2>About Me</h2>
+            <p>
+                I am a passionate chef with experience in Italian cuisine.
+                I enjoy sharing my cooking knowledge and helping others
+                discover new cooking techniques.
+            </p>
+        </section>
 
-</main>
+    </main>
 
-<footer>
-    <div class="footer-content">
-        <div class="footer-logo">
-            <img src="images/loogo.png" alt="">
-            <span>Taste Journey</span>
-        </div>
-        <div class="footer-Email">
-            <strong>Contact</strong><br>
-            <a href="mailto:info@TasteJourny.edu">info@TasteJourny.edu</a>
-        </div>
-        <div class="Social">
-            <strong>Follow us</strong> 
-            <div class="Social-img">
-                <a href="#"><img src="images/instagram.png" alt=""></a>
-                <a href="#"><img src="images/twitter.png" alt=""></a>
-                <a href="#"><img src="images/linkedin.png" alt=""></a>
+    <footer>
+        <div class="footer-content">
+
+            <div class="footer-logo">
+                <img src="images/loogo.png" alt="">
+                <span>Taste Journey</span>
+
+            </div>
+            <div class="footer-Email">
+                <strong>Contact</strong><br>
+                <a href="mailto:info@TasteJourny.edu">info@TasteJourny.edu</a>
+            </div>
+            <div class="Social">
+                <strong>Follow us</strong>
+                <div class="Social-img">
+                    <a href="#">
+                        <img src="images/instagram.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="images/twitter.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="images/linkedin.png" alt="">
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="copyright">
-        &copy; 2026 Taste Journey
-    </div>
-</footer>
+
+        <div class="copyright">
+            &copy; 2026 Taste Journey
+        </div>
+
+    </footer>
+
 
 </body>
+
 </html>
