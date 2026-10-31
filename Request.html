@@ -7,8 +7,7 @@
 <style>
 
 
-
-.breadcrumb {
+.breadcrumb { 
   font-size: 15px;
   margin: 15px 20px 10px;
 }
@@ -30,7 +29,6 @@ main h1 {
   font-size: 36px;
 }
 
-/* Flexbox form */
 .request-form {
   display: flex;
   flex-direction: column;
@@ -43,6 +41,7 @@ main h1 {
   font-weight: bold;
   font-size: 20px;
   margin: 20px 0 10px 20px;
+  margin-top: 30px;
 }
 
 .request-form select,
@@ -75,12 +74,10 @@ main h1 {
   pointer-events: none;
 }
 
-/* Hide calendar icon */
 input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
 }
 
-/* Submit button */
 .request-form button {
   align-self: center;
   margin-top: 40px;
@@ -97,7 +94,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-color: #bfbfbf;
 }
 
-/* Small screens (media query) */
 @media screen and (max-width: 600px) {
   main h1 {
     font-size: 26px;
@@ -146,7 +142,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 
 <main>
-  <!-- Breadcrumb -->
   <p class="breadcrumb">
     <a href="index.html">Home</a> &gt;
     <a href="member-dashboard.html">Member Dashboard</a> &gt;

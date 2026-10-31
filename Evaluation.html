@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+<meta charset="UTF-8">
+
+<style>
+
+.breadcrumb {
+  font-size: 15px;
+  margin: 15px 20px 10px;
+}
+
+.breadcrumb a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.back-link {
+  display: inline-block;
+  margin: 0 20px 10px;
+  font-size: 15px;
+  color: inherit;
+}
+
+main h1 {
+  margin: 10px 30px 20px;
+  font-size: 36px;
+}
+
+
+.evaluation-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+.evaluation-form > label,
+.evaluation-form legend {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px;
+  margin-top: 30px;
+
+}
+
+.evaluation-form select,
+.evaluation-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 18px 25px;
+  font-size: 18px;
+  font-family: inherit;
+  border: 2px solid #000;
+  border-radius: 40px;
+  background-color: #fff;
+}
+
+.evaluation-form textarea {
+  border-radius: 25px;
+  resize: vertical;
+    margin-bottom: 10px;
+
+}
+
+.select-box {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.select-box select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 60px;
+}
+
+.arrow {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Fieldset (rating + next offering) */
+.evaluation-form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.evaluation-form legend {
+  padding: 0;
+}
+
+.evaluation-form fieldset label {
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0;
+  cursor: pointer;
+}
+
+.options-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-left: 20px;
+}
+
+.options-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-left: 20px;
+}
+
+.evaluation-form button {
+  align-self: center;
+  margin-top: 40px;
+  padding: 14px 60px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #d9d9d9;
+  border: 2px solid #000;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.evaluation-form button:hover {
+  background-color: #bfbfbf;
+}
+
+@media screen and (max-width: 600px) {
+  main h1 {
+    font-size: 26px;
+  }
+
+  .evaluation-form > label,
+  .evaluation-form legend {
+    font-size: 18px;
+  }
+
+  .evaluation-form select,
+  .evaluation-form textarea {
+    padding: 14px 20px;
+  }
+
+  .arrow {
+    right: 25px;
+  }
+}
+</style>
+
+
+ <link rel="stylesheet" href="style.css">
+
+
+ <title>Taste Journey</title>
+</head>
+<body>
+<header>
+<div class="logo">
+    <img src="images/logo.jpg" alt="logo">
+      <h2>Taste Journey</h2>
+
+
+</div>
+</header>
+<div class="navbar">
+<nav>
+<a href="">Home</a> |
+<a href="">Club Offerings</a> |
+<a href="">About us</a> |
+<a href="">Member Dashboard</a> |
+<a href="">Manager Dashboard</a>
+
+</nav>
+</div>
+
+
+
+<main>
+
+  <!-- Breadcrumb -->
+  <p class="breadcrumb">
+    <a href="index.html">Home</a> &gt;
+    <a href="member-dashboard.html">Member Dashboard</a> &gt;
+    Offering Evaluation
+  </p>
+
+  <a href="member-dashboard.html" class="back-link">&lt; Back</a>
+
+  <h1>Offering Evaluation</h1>
+
+  <!-- Evaluation form -->
+  <form action="#" method="post" class="evaluation-form">
+
+    <label for="offering">Choose the Completed Offering</label>
+    <div class="select-box">
+      <select id="offering" name="offering" required>
+        <option value="" selected disabled>select the offering......</option>
+        <option value="table-tales">Table Tales</option>
+        <option value="japanese-cuisine">The Art of Japanese Cuisine</option>
+        <option value="mystery-basket">Mystery Basket</option>
+        <option value="pasta-prosecco">Pasta &amp; Prosecco</option>
+        <option value="passport-to-flavor">Passport to Flavor</option>
+        <option value="mexican-flavors">Mexican Flavors</option>
+      </select>
+      <span class="arrow">V</span>
+    </div>
+
+    <fieldset>
+      <legend>Rating</legend>
+      <div class="options-row">
+        <label><input type="radio" name="rating" value="1" required> 1</label>
+        <label><input type="radio" name="rating" value="2"> 2</label>
+        <label><input type="radio" name="rating" value="3"> 3</label>
+        <label><input type="radio" name="rating" value="4"> 4</label>
+        <label><input type="radio" name="rating" value="5"> 5</label>
+      </div>
+    </fieldset>
+
+    <label for="feedback">Written Feedback</label>
+    <textarea id="feedback" name="feedback" rows="3"
+              placeholder="Write your feedback here..." required></textarea>
+
+    <fieldset>
+      <legend>What would you like us to offer next?</legend>
+      <div class="options-column">
+        <label><input type="radio" name="next" value="italian" required> Italian Cuisine</label>
+        <label><input type="radio" name="next" value="desserts"> Desserts &amp; Baking</label>
+        <label><input type="radio" name="next" value="seafood"> Seafood</label>
+        <label><input type="radio" name="next" value="other"> Other</label>
+      </div>
+    </fieldset>
+
+    <button type="submit">Submit</button>
+  </form>
+</main>
+
+
+<footer>
+<div class="footer-content">
+
+<div class="footer-logo">
+      <img src="images/loogo.png" alt="">
+    <span>Taste Journey</span>
+   
+</div>
+<div class="footer-Email">
+    <strong>Contact</strong><br>
+    <a href="mailto:info@TasteJourny.edu">info@TasteJourny.edu</a>
+</div>
+<div class="Social">
+   <strong>Follow us</strong> 
+   <div class="Social-img">
+    <a href="#">
+        <img src="images/instagram.png" alt="">
+   </a>
+      <a href="#">
+        <img src="images/twitter.png" alt="">
+      </a>
+      <a href="#">
+        <img src="images/linkedin.png" alt="">
+      </a>
+   </div>
+</div>
+</div>
+
+<div class="copyright">
+    &copy; 2026 Taste Journey
+</div>
+
+</footer>
+
+
+
+
+</body>
+
+
+
+
+
+</html>
