@@ -21,6 +21,10 @@ body {
      font-family: Georgia, serif; 
      color: var(--olive);
      }
+h2 a{
+            text-decoration: none;
+            color: var(--olive); 
+      }
 h1 { 
     font-size: 32px; 
 }
