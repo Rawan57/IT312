@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+<meta charset="UTF-8">
+
+<style>
+
+
+
+.breadcrumb {
+  font-size: 15px;
+  margin: 15px 20px 10px;
+}
+
+.breadcrumb a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.back-link {
+  display: inline-block;
+  margin: 0 20px 10px;
+  font-size: 15px;
+  color: inherit;
+}
+
+main h1 {
+  margin: 10px 30px 20px;
+  font-size: 36px;
+}
+
+/* Flexbox form */
+.request-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+.request-form label {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 20px 0 10px 20px;
+}
+
+.request-form select,
+.request-form input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 18px 25px;
+  font-size: 18px;
+  border: 2px solid #000;
+  border-radius: 40px;
+  background-color: #fff;
+}
+
+/* Custom arrow */
+.select-box {
+  position: relative;
+}
+
+.select-box select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 60px;
+}
+
+.arrow {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Hide calendar icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+/* Submit button */
+.request-form button {
+  align-self: center;
+  margin-top: 40px;
+  padding: 14px 60px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #d9d9d9;
+  border: 2px solid #000;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.request-form button:hover {
+  background-color: #bfbfbf;
+}
+
+/* Small screens (media query) */
+@media screen and (max-width: 600px) {
+  main h1 {
+    font-size: 26px;
+  }
+
+  .request-form label {
+    font-size: 18px;
+  }
+
+  .request-form select,
+  .request-form input {
+    padding: 14px 20px;
+  }
+
+  .arrow {
+    right: 25px;
+  }
+}
+</style>
+
+
+ <link rel="stylesheet" href="style.css">
+
+
+ <title>Taste Journey</title>
+</head>
+<body>
+<header>
+<div class="logo">
+    <img src="images/logo.jpg" alt="logo">
+      <h2>Taste Journey</h2>
+
+
+</div>
+</header>
+<div class="navbar">
+<nav>
+<a href="">Home</a> |
+<a href="">Club Offerings</a> |
+<a href="">About us</a> |
+<a href="">Member Dashboard</a> |
+<a href="">Manager Dashboard</a>
+
+</nav>
+</div>
+
+
+<main>
+  <!-- Breadcrumb -->
+  <p class="breadcrumb">
+    <a href="index.html">Home</a> &gt;
+    <a href="member-dashboard.html">Member Dashboard</a> &gt;
+    Request to join an offering
+  </p>
+
+  <a href="member-dashboard.html" class="back-link">&lt; Back</a>
+
+  <h1>Request to join an offering</h1>
+
+  <!-- Request form -->
+  <form action="#" method="post" class="request-form">
+
+    <label for="offering">Choose the Offering</label>
+    <div class="select-box">
+      <select id="offering" name="offering" required>
+        <option value="" selected disabled>select the offering......</option>
+        <option value="table-tales">Table Tales</option>
+        <option value="japanese-cuisine">The Art of Japanese Cuisine</option>
+        <option value="mystery-basket">Mystery Basket</option>
+        <option value="pasta-prosecco">Pasta &amp; Prosecco</option>
+        <option value="passport-to-flavor">Passport to Flavor</option>
+        <option value="mexican-flavors">Mexican Flavors</option>
+      </select>
+      <span class="arrow">V</span>
+    </div>
+
+    <label for="fullname">Full Name</label>
+    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+    <label for="prefdate">Preferred Date</label>
+    <input type="date" id="prefdate" name="prefdate" required>
+
+    <button type="submit">Submit</button>
+  </form>
+</main>
+
+<footer>
+<div class="footer-content">
+
+<div class="footer-logo">
+      <img src="images/loogo.png" alt="">
+    <span>Taste Journey</span>
+   
+</div>
+<div class="footer-Email">
+    <strong>Contact</strong><br>
+    <a href="mailto:info@TasteJourny.edu">info@TasteJourny.edu</a>
+</div>
+<div class="Social">
+   <strong>Follow us</strong> 
+   <div class="Social-img">
+    <a href="#">
+        <img src="images/instagram.png" alt="">
+   </a>
+      <a href="#">
+        <img src="images/twitter.png" alt="">
+      </a>
+      <a href="#">
+        <img src="images/linkedin.png" alt="">
+      </a>
+   </div>
+</div>
+</div>
+
+<div class="copyright">
+    &copy; 2026 Taste Journey
+</div>
+
+</footer>
+
+
+
+
+</body>
+
+
+
+
+
+</html>
