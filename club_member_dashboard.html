@@ -6,6 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Member Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .offerings{
+    display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+    gap: 25px;
+   margin-bottom: 40px;
+}
+.card{
+    width: 30%;
+    border: 2px solid black;
+    border-radius: 18px;
+   padding: 5px;
+   overflow: hidden;
+}
+.food-img {
+    width: 100%;
+    height: 150px;
+    border-radius: 14px;
+    object-fit: cover;
+    display: block;
+}
+
+.card h2 {
+    font-size: 17px;
+    margin: 5px 0;
+   text-decoration:underline; 
+}
+
+.card p {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.card .chef {
+    font-size: 11px;
+    margin-top:0;
+    font-weight: bold;
+}
+.card .chef img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid black;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-top: -20px;
+    position: relative;
+}
+.card .location {
+    margin-top: 20px;
+}
+.heart{
+    font-size: 30px;
+    cursor: pointer;
+}
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+.location img ,.price img {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.card .location,
+.card .price {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+    </style>
 </head>
 <header>
     <div class="logo">
@@ -68,7 +144,44 @@
                 </tbody>
             </table>
             <!-- Favourite Offerings -->
-       
+             <div class="offerings">
+       <div class="card">
+        <img class="food-img" src="images/table.jpg" alt="Table Tales">
+        <p class="chef"> 
+            <img src="images/chef1.jpg" alt="Chef"> Chef Khled</p>
+        <h2><a href="Table Details.html">Table Tales</a></h2>
+        <p>Japanese Table Styling Workshop</p>
+        <p class="location"><img src="images/location-pin.png" alt="Location"> Taste Journey Studio</p>
+        <div class="card-bottom">
+            <span class="price"><img src="images/money.png" alt="Price"> 100 SR</span>
+            <span class="heart">♡</span>
+        </div>
+       </div>
+        <div class="card">
+        <img class="food-img" src="images/maxican.jpg" alt="Mexican Flavors">
+        <p class="chef"> 
+            <img src="images/chef3.jpg" alt="Chef"> Chef Manal</p>
+        <h2><a href="Mexican Flavors.html">Mexican Flavors</a></h2>
+        <p>Mexican Cooking Class</p>
+        <p class="location"><img src="images/location-pin.png" alt="Location"> Taste Journey Studio</p>
+        <div class="card-bottom">
+            <span class="price"><img src="images/money.png" alt="Price"> 120 SR</span>
+            <span class="heart">♡</span>
+        </div>
+    </div>
+    <div class="card">
+        <img class="food-img" src="images/basket.jpg" alt="Mystery Basket">
+        <p class="chef"> 
+            <img src="images/chef2.jpg" alt="Chef"> Chef Sara</p>
+        <h2><a href="basketDetails.html">Mystery Basket</a></h2>
+        <p>Creative Cooking Activity</p>
+        <p class="location"><img src="images/location-pin.png" alt="Location"> Taste Journey Studio</p>
+        <div class="card-bottom">
+            <span class="price"><img src="images/money.png" alt="Price"> 180 SR</span>
+            <span class="heart">♡</span>
+        </div>
+    </div>
+    </div>
             </section>
             <!-- Dashboard Links -->
             <section class="dashboard-links">
