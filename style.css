@@ -57,7 +57,7 @@ header {
      text-decoration: none; 
      color: var(--olive);
      font-size: 14px; 
-     font-weight: bold; }
+}
 /* Buttons */
  button, .button {
      background-color: var(--olive); 
