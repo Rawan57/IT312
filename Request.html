@@ -57,7 +57,6 @@ main h1 {
  
 }
 
-/* Custom arrow */
 .select-box {
   position: relative;
 }
@@ -116,19 +115,23 @@ main h1 {
 </nav>
 </div>
 
+ <div class="breadcrumb-container">
+    <nav class="breadcrumb">
+      <a href="Home.html">Home</a> &gt;
+      <a href="club_member_dashboard.html">Member Dashboard</a> &gt;
+      Request to join an offering
+    </nav>
+  </div>
+
+  
 
 <main>
-  <p class="breadcrumb">
-    <a href="Home.html">Home</a> &gt;
-    <a href="club_member_dashboard.html">Member Dashboard</a> &gt;
-    Request to join an offering
-  </p>
+ 
 
   <a href="club_member_dashboard.html" class="back-link">&lt; Back</a>
 
   <h1>Request to join an offering</h1>
 
-  <!-- Request form -->
   <form action="#" method="post" class="request-form">
 
     <label for="offering">Choose the Offering</label>
@@ -142,7 +145,7 @@ main h1 {
         <option value="passport-to-flavor">Passport to Flavor</option>
         <option value="mexican-flavors">Mexican Flavors</option>
       </select>
-      <span class="arrow">V</span>
+      <span class="arrow">&#9660;</span>
     </div>
 
     <label for="fullname">Full Name</label>

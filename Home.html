@@ -6,15 +6,6 @@
 <meta charset="UTF-8">
  <link rel="stylesheet" href="style.css">
 <title>Taste Journey</title>
-</head>
-<body>
-<header>
-<div class="logo">
-    <img src="images/loogo.png" alt="logo">
-      <h2>Taste Journey</h2>
-
-
-</div>
 
 <style>
   .home-hero { display: flex; align-items: center; gap: 10px; padding: 40px 5%; }
@@ -32,12 +23,29 @@
   .home-card-link {flex: 1; min-width: 220px; text-decoration: none; color: inherit; }
   .home-card-link:hover .home-card { box-shadow: 0 4px 8px rgba(0,0,0,0.25); }
   .home-card img { width: 100%; height: 210px; object-fit: cover; border-radius: 12px; }
+  .home-card-link:hover .home-card img { transform: scale(1.08); }
   .home-card h3 { margin: 12px 0 6px; text-decoration: underline; }
   .home-review { flex: 1;  min-height: 100px; margin: 0;font-size: 1rem; border: 2px solid #000; border-radius: 16px; padding: 14px 10px; }
   .home-stars { color: #999; font-size: 1.4rem; }
+  .home-card { overflow: hidden; }
+.home-card-extra { display: none; margin-top: 10px; }
+.home-card-link:hover .home-card-extra { display: block; }
 </style>
-<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<header>
+<div class="logo">
+    <img src="images/loogo.png" alt="logo">
+      <h2>Taste Journey</h2>
+
+
+</div>
+
+
+
 </header>
+
 <div class="navbar">
 <nav>
  <a href="Home.html">Home</a> | 
@@ -58,7 +66,7 @@
       <p>Be part of our cooking club and experience recipes, cooking skills and culinary adventures.</p>
       <a href="Offering.html" class="home-btn">Get Started</a>
     </div>
-    <img src="images/Home.jpg" alt="">
+    <img src="images/home.jpg" alt="">
   </section>
 
   <section class="home-know">
@@ -78,6 +86,9 @@
         <img src="images/basket.jpg" alt="">
         <h3>Mystery Basket</h3>
         <p>Cook a unique dish with secret ingredients.</p>
+        <div class="home-card-extra">
+  <p>Duration: 1.5 hours</p>
+</div>
       </article>
     </a>
   
@@ -88,6 +99,9 @@
         <img src="images/max.jpg" alt="">
         <h3>Mexican Flavors</h3>
         <p>Taste bold spices and traditional Mexican dishes.</p>
+        <div class="home-card-extra">
+  <p>Duration: 1 hour</p>
+</div>
       </article>
       </a>
 
@@ -96,24 +110,38 @@
         <img src="images/tap.jpg" alt="">
         <h3>Table Tales</h3>
         <p>Tell a story while enjoying delicious dishes around the table.</p>
+        <div class="home-card-extra">
+  <p>Duration: 2 hours</p>
+</div>
       </article>
       </a>
 
     </div>
   </section>
 
+
+
   <section class="home-reviews">
     <h2>Member Reviews</h2>
     <div class="home-review-list">
-      <blockquote class="home-review"><div class="home-stars">★★★★☆</div><p>"Amazing experience" — Abdullah</p></blockquote>
-      <blockquote class="home-review"><div class="home-stars">★★★★★</div><p>"I learned the delicious food" — Rawan</p></blockquote>
-      <blockquote class="home-review"><div class="home-stars">★★★★★</div><p>"Fun way to explore different cuisines!" — Shatha</p></blockquote>
-    </div>
-  </section>
+
+<div class="home-review">
+  <div class="home-stars">★★★★☆</div>
+  <p>Mystery Basket<br>"Amazing experience" — Abdullah</p>
+</div>    
+
+<div class="home-review">
+  <div class="home-stars">★★★★★</div>
+  <p>Mexican Flavors<br>"I learned the delicious food" — Rawan</p>
+</div>
+
+<div class="home-review">
+  <div class="home-stars">★★★★★</div>
+  <p>Table Tales<br>"Fun way to explore different cuisines!" — Shatha</p>
+</div>
+
+
 </main>
-
-
-
 
 
 
