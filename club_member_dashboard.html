@@ -7,13 +7,17 @@
     <link rel="stylesheet" href="style.css">
     <style>
 
-     .breadcrumb-container {
-            padding: 8px 0px 10px 10px;
-            font-family: Arial, sans-serif;
-            
-        }
+   .breadcrumb {
+    padding: 10px 0;
+    margin: 0;
+    font-size: 14px;
+}
 
-         .breadcrumb-container a:hover {
+.breadcrumb a {
+    color: #45451f;
+     text-decoration: none;
+}
+ .breadcrumb a:hover {
             text-decoration: underline;
         }
         
@@ -50,7 +54,14 @@
     }
  
 
-   
+    /* Participation table */
+    table {
+        width: 80%;
+        margin: 0 auto 40px;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
 
    
    
@@ -163,14 +174,13 @@
     </nav>
 </div>
 
-<div class="breadcrumb-container">
-    <div class="breadcrumb">
-        <a href="Home.html">Home</a>
-        <span>&gt;</span>
 
-        <span >Member Dashboard</span>
-    </div>
-</div>
+   
+       <p class="breadcrumb">
+    <a href="Home.html">Home</a> &gt;
+    Member Dashboard
+ </p>
+
     <body>
         <main class="dashboard">
 
