@@ -87,15 +87,7 @@
             text-decoration: underline;
         }
 
-        .breadcrumb .separator {
-            margin: 0 0px;
-            color: #999;
-        }
-
-        .breadcrumb .current-page {
-            color: #666;
-            font-weight: normal;
-        }
+       
 
         /* Mission */
         .mission {
@@ -118,17 +110,19 @@
             margin-bottom: 55px;
         }
 
-        .team-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 25px;
-            margin-bottom: 40px;
-            padding: 10px 0;
-        }
+       .team-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 15px;
+}
+
+.team-list .card {
+    flex-shrink: 0;
+    width: 35%;
+}
 
         .team .card {
-            width: 31%;
             border: 1px solid black;
             border-radius: 18px;
             padding: 12px;
@@ -223,42 +217,6 @@
             color: #fff;
             cursor: pointer;
         }
-
-
-
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .team .card {
-                width: 48%;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 0 15px;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                gap: 20px;
-                text-align: center;
-            }
-
-            .team .card {
-                width: 100%;
-            }
-
-            .form-group {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 6px;
-            }
-
-            .form-group label {
-                width: auto;
-            }
-        }
     </style>
 </head>
 
@@ -283,11 +241,9 @@
     </div>
 
 
-    <div class="breadcrumb">
-        <a href="Home.html">Home</a>
-        <span class="separator">&gt;</span>
-        <span class="separator">About Us</span>
-    </div>
+   <nav class="breadcrumb">
+    <a href="Home.html">Home</a> &gt; About Us
+</nav>
 
     <main class="container">
 
