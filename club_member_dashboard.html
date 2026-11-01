@@ -7,6 +7,133 @@
     <title>Member Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <style>
+          * {
+        box-sizing: border-box;
+    }
+
+    
+
+    body {
+        margin: 0;
+        padding: 0px;
+        font-family: Arial, sans-serif;
+        color: #111;
+        background-color: f7f1e5;
+    }
+
+     .breadcrumb-container {
+            padding: 8px 0px 10px 10px;
+            font-family: Arial, sans-serif;
+            
+        }
+
+         .breadcrumb-container a:hover {
+            text-decoration: underline;
+        }
+          h1 {
+            font-size: 24px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        th,
+        td {
+            padding: 12px 5px;
+            font-size: 12px;
+        }
+
+         /* Chef name */
+    .chef-name {
+        font-size: 11px;
+        margin: 3px 0;
+    }
+ .dashboard-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin: 40px 0 10px;
+    }
+ /* Bottom links */
+   
+    .dashboard-links a {
+        width: 450px;
+        max-width: 100%;
+        min-height: 85px;
+        padding: 20px;
+        border: 2px solid #555;
+        border-radius: 15px;
+        background-color: #d6d6d6;
+        color: #222;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+
+    .dashboard-links a span {
+        font-weight: bold;
+    }
+
+    .dashboard {
+        max-width: 1000px;
+        margin: auto;
+    }
+ .dashboard-links a {
+            font-size: 16px;
+            min-height: 70px;
+            
+        }
+
+    /* Main heading */
+    h1 {
+        font-size: 30px;
+        margin-bottom: 35px;
+    }
+
+    /* Participation table */
+    table {
+        width: 80%;
+        margin: 0 auto 40px;
+        border-collapse: collapse;
+
+
+        text-align: center;
+    }
+
+    th,
+    td {
+        border: 2px solid #555;
+        padding: 25px 12px;
+        font-size: 17px;
+    }
+
+    th {
+        background-color: #d6d6d6;
+        font-size: 19px;
+    }
+
+    td {
+        font-weight: bold;
+    }
+
+
+    /* Favourite section */
+    .favourite-title {
+        margin: 40px 10px 35px;
+    }
+
+    .favourite-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+        gap: 30px;
+        padding: 0 25px;
+    }
+
         .offerings{
     display: flex;
    flex-wrap: wrap;
@@ -81,7 +208,20 @@
     font-size: 11px;
     font-weight: bold;
 }
+   /* Responsive layout */
+    @media (max-width: 700px) {
+        body {
+            padding: 10px;
+        }
 
+      
+        .favourite-container {
+            flex-direction: column;
+            align-items: center;
+            padding: 0 15px;
+        }
+
+    }
     </style>
 </head>
 <header>
@@ -226,236 +366,18 @@
 </html>
 
 <style>
-    * {
-        box-sizing: border-box;
-    }
+  
+
+  
+   
+   
+
+   
+   
 
     
 
-    body {
-        margin: 0;
-        padding: 0px;
-        font-family: Arial, sans-serif;
-        color: #111;
-        background-color: f7f1e5;
-    }
+    
 
-     .breadcrumb-container {
-            padding: 8px 0px 10px 10px;
-            font-family: Arial, sans-serif;
-            
-        }
-
-         .breadcrumb-container a:hover {
-            text-decoration: underline;
-        }
-
-    .dashboard {
-        max-width: 1000px;
-        margin: auto;
-    }
-
-    /* Main heading */
-    h1 {
-        font-size: 30px;
-        margin-bottom: 35px;
-    }
-
-    /* Participation table */
-    table {
-        width: 80%;
-        margin: 0 auto 40px;
-        border-collapse: collapse;
-
-
-        text-align: center;
-    }
-
-    th,
-    td {
-        border: 2px solid #555;
-        padding: 25px 12px;
-        font-size: 17px;
-    }
-
-    th {
-        background-color: #d6d6d6;
-        font-size: 19px;
-    }
-
-    td {
-        font-weight: bold;
-    }
-
-
-    /* Favourite section */
-    .favourite-title {
-        margin: 40px 10px 35px;
-    }
-
-    .favourite-container {
-        display: flex;
-        justify-content: space-around;
-        align-items: stretch;
-        gap: 30px;
-        padding: 0 25px;
-    }
-
-    /* Offering card */
-    .offering-card {
-        position: relative;
-        flex: 1;
-        min-width: 0;
-        border: 2px solid #555;
-        border-radius: 25px;
-        padding: 7px;
-        padding-bottom: 35px;
-    }
-
-    /* Image placeholder */
-    .offering-image {
-        width: 100%;
-        height: 155px;
-        border: 3px double #555;
-        border-radius: 18px;
-        background-color: white;
-        position: relative;
-    }
-
-    /* Cross inside image */
-    .offering-image::before,
-    .offering-image::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background-color: #555;
-        top: 50%;
-        left: 0;
-    }
-
-    .offering-image::before {
-        transform: rotate(27deg);
-    }
-
-    .offering-image::after {
-        transform: rotate(-27deg);
-    }
-
-    /* Chef name */
-    .chef-name {
-        font-size: 11px;
-        margin: 3px 0;
-    }
-
-    /* Offering title */
-    .offering-card h2 {
-        font-size: 22px;
-        text-align: center;
-        margin: 5px 0 12px;
-    }
-
-    .offering-card h2 a {
-        color: black;
-    }
-
-    /* Description */
-    .description {
-        font-size: 11px;
-        line-height: 1.5;
-        margin: 10px 5px 15px;
-    }
-
-    /* Offering information */
-    .offering-info {
-        display: flex;
-        flex-direction: column;
-        gap: 3px;
-        font-size: 10px;
-        margin: 0 5px;
-    }
-
-    .heart {
-        position: absolute;
-        right: 12px;
-        bottom: 8px;
-        font-size: 27px;
-        color: gray;
-    }
-
-    /* Bottom links */
-    .dashboard-links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        margin: 40px 0 10px;
-    }
-
-    .dashboard-links a {
-        width: 450px;
-        max-width: 100%;
-        min-height: 85px;
-        padding: 20px;
-        border: 2px solid #555;
-        border-radius: 15px;
-        background-color: #d6d6d6;
-        color: #222;
-        font-size: 20px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        text-align: center;
-    }
-
-    .dashboard-links a span {
-        font-weight: bold;
-    }
-
-    /* Responsive layout */
-    @media (max-width: 700px) {
-        body {
-            padding: 10px;
-        }
-
-        h1 {
-            font-size: 24px;
-        }
-
-        table {
-            width: 100%;
-        }
-
-        th,
-        td {
-            padding: 12px 5px;
-            font-size: 12px;
-        }
-
-        .favourite-container {
-            flex-direction: column;
-            align-items: center;
-            padding: 0 15px;
-        }
-
-        .offering-card {
-            width: 100%;
-            max-width: 350px;
-        }
-
-        .offering-image {
-            height: 180px;
-        }
-
-        .dashboard-links a {
-            font-size: 16px;
-            min-height: 70px;
-            
-        }
-
-
-
-        /*rawan*/
-        
-    }
-</style>
+   
+ 
