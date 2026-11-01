@@ -56,7 +56,7 @@ header {
 .navbar a {
      text-decoration: none; 
      color: var(--olive);
-     font-size:18px; 
+     font-size:16px; 
 }
 /* Breadcrumb */
 .breadcrumb {
