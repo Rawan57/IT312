@@ -7,6 +7,63 @@
 
     <link rel="stylesheet" href="style.css"> 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #222;
+            background-color: #f7f1e5;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            align-items: center;
+            padding: 15px 6%;
+            border-bottom: 2px solid black;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 70px;
+            height: 70px;
+            margin-right: 15px;
+        }
+
+        .logo h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            border-bottom: 1px solid black;
+            background-color: #f7f1e5;
+            ;
+        }
+
+        .navbar nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+            font-weight: bold;
+        }
 
         /* Main Container */
         .container {
@@ -15,21 +72,24 @@
             padding: 0 25px;
         }
 
-      
         /* Breadcrumb Styles */
         .breadcrumb {
-            padding: 15px 6%;
+            padding: 15px 15px;
             font-size: 14px;
         }
+
         .breadcrumb a {
-            color: var(--olive);
+            color: #45451f;
             text-decoration: none;
         }
+
         .breadcrumb a:hover {
             text-decoration: underline;
         }
 
-        /* Mission Section */
+       
+
+        /* Mission */
         .mission {
             margin-bottom: 40px;
         }
