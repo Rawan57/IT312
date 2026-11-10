@@ -42,4 +42,49 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         showCards(sorted);
     });
+    // -——— Filter + Search -———
+    var filterButtons = document.querySelectorAll(".filter-buttons button");
+    var searchInput = document.querySelector(".search input");
+    var currentFilter = "All";
+
+    // نوع العرض من السطر الثاني في الكرت
+    function getType(card) {
+        var text = card.querySelector("h2 + p").textContent;
+        if (/workshop/i.test(text)) return "Workshops";
+        if (/class/i.test(text)) return "Classes";
+        if (/activity/i.test(text)) return "Activities";
+        return "Other";
+    }
+
+    // يطبق التصفية والبحث مع بعض
+    function applyFilters() {
+        var word = searchInput.value.trim().toLowerCase();
+
+        cards.forEach(function (card) {
+            var matchType = currentFilter === "All" || getType(card) === currentFilter;
+            var cardText = card.textContent.toLowerCase();
+            var matchSearch = word === "" || cardText.indexOf(word) !== -1;
+
+            if (matchType && matchSearch) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    }
+
+    // الضغط على أزرار التصفية
+    filterButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            currentFilter = button.textContent.trim();
+
+            filterButtons.forEach(function (b) { b.classList.remove("active"); });
+            button.classList.add("active");
+
+            applyFilters();
+        });
+    });
+
+    // البحث أثناء الكتابة
+    searchInput.addEventListener("input", applyFilters);
 });
