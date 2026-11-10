@@ -87,4 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // البحث أثناء الكتابة
     searchInput.addEventListener("input", applyFilters);
+
+
 });
