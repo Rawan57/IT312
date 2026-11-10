@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         cards.forEach(function (card) {
             var matchType = currentFilter === "All" || getType(card) === currentFilter;
-            var cardText = card.textContent.toLowerCase();
+            var cardText = getName(card).toLowerCase();
             var matchSearch = word === "" || cardText.indexOf(word) !== -1;
 
             if (matchType && matchSearch) {
