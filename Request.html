@@ -121,11 +121,11 @@ main h1 {
 
   <h1>Request to join an offering</h1>
 
-  <form action="#" method="post" class="request-form">
+  <form action="#" method="post" class="request-form" id="request-form" >
 
     <label for="offering">Choose the Offering</label>
     <div class="select-box">
-      <select id="offering" name="offering" required>
+      <select id="offering" name="offering" >
         <option value="" selected disabled>select the offering......</option>
         <option value="table-tales">Table Tales</option>
         <option value="japanese-cuisine">The Art of Japanese Cuisine</option>
@@ -138,13 +138,14 @@ main h1 {
     </div>
 
     <label for="fullname">Full Name</label>
-    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" >
 
     <label for="prefdate">Preferred Date</label>
-    <input type="date" id="prefdate" name="prefdate" required>
+    <input type="date" id="prefdate" name="prefdate" >
 
     <button type="submit">Submit</button>
   </form>
+  <section id="my-requests"></section>
 </main>
 
 <footer>
@@ -182,7 +183,7 @@ main h1 {
 </footer>
 
 
-
+<script src="js/request.js"></script> 
 
 </body>
 
