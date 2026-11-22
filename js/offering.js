@@ -1,92 +1,155 @@
-document.addEventListener("DOMContentLoaded", function () {
-    var list = document.getElementById("offerings-list");
-    var sortSelect = document.getElementById("sort");
-    var cards = Array.from(list.querySelectorAll(".card"));
-    function getName(card) {
-        return card.querySelector("h2").textContent.trim();
-    }
+// ===== Club Offerings Page =====
 
-    function getPrice(card) {
-        var text = card.querySelector(".price").textContent;
-        return parseFloat(text.replace(/[^0-9.]/g, "")) || 0;
-    }
-    function showCards(orderedCards) {
-        orderedCards.forEach(function (card) {
-            list.appendChild(card);
-        });
-    }
+var list = document.getElementsByClassName("offerings")[0];
+var allCards = document.getElementsByClassName("card");
+var hearts = document.getElementsByClassName("heart");
+var sortMenu = document.getElementById("sort");
+var searchBox = document.querySelectorAll(".search input")[0];
+var filterButtons = document.querySelectorAll(".filter-buttons button");
 
-    function shuffle(array) {
-        var copy = array.slice();
-        for (var i = copy.length - 1; i > 0; i--)
-            {
-            var j = Math.floor(Math.random() * (i + 1));
-            var temp = copy[i];
-            copy[i] = copy[j];
-            copy[j] = temp;
-        }
-        return copy;
-    }
+// copy the cards into a normal array so we can sort them
+var cards = [];
+for (var i = 0; i < allCards.length; i++) {
+  cards.push(allCards[i]);
+}
 
-    showCards(shuffle(cards));
-    sortSelect.addEventListener("change", function () {
-        var sorted = cards.slice();
-        if (sortSelect.value === "low") {
-            sorted.sort(function (a, b) { return getPrice(a) - getPrice(b); });
-        } else if (sortSelect.value === "high") {
-            sorted.sort(function (a, b) { return getPrice(b) - getPrice(a); });
-        } else if (sortSelect.value === "az") {
-            sorted.sort(function (a, b) { return getName(a).localeCompare(getName(b)); });
-        } else if (sortSelect.value === "za") {
-            sorted.sort(function (a, b) { return getName(b).localeCompare(getName(a)); });
-        }
-        showCards(sorted);
+// -——— helper functions -———
+function getCardName(card) {
+  return card.getElementsByTagName("a")[0].innerHTML;
+}
+
+function getCardPrice(card) {
+  var priceText = card.getElementsByClassName("price")[0].innerHTML;
+  return parseInt(priceText.match(/\d+/)[0]);
+}
+
+function getCardType(card) {
+  return card.getElementsByTagName("p")[1].innerHTML;
+}
+
+function showCards() {
+  for (var i = 0; i < cards.length; i++) {
+    list.appendChild(cards[i]);
+  }
+}
+
+// -——— 1) random order when the page opens -———
+for (var i = cards.length - 1; i > 0; i--) {
+  var j = Math.floor(Math.random() * (i + 1));
+  var temp = cards[i];
+  cards[i] = cards[j];
+  cards[j] = temp;
+}
+showCards();
+
+// -——— 2) sort -———
+sortMenu.onchange = function () {
+  var choice = sortMenu.value;
+
+  if (choice == "low") {
+    cards.sort(function (a, b) { return getCardPrice(a) - getCardPrice(b); });
+  } else if (choice == "high") {
+    cards.sort(function (a, b) { return getCardPrice(b) - getCardPrice(a); });
+  } else if (choice == "az") {
+    cards.sort(function (a, b) {
+      if (getCardName(a) < getCardName(b)) return -1;
+      if (getCardName(a) > getCardName(b)) return 1;
+      return 0;
     });
-    // -——— Filter + Search -———
-    var filterButtons = document.querySelectorAll(".filter-buttons button");
-    var searchInput = document.querySelector(".search input");
-    var currentFilter = "All";
-
-    // نوع العرض من السطر الثاني في الكرت
-    function getType(card) {
-        var text = card.querySelector("h2 + p").textContent;
-        if (/workshop/i.test(text)) return "Workshops";
-        if (/class/i.test(text)) return "Classes";
-        if (/activity/i.test(text)) return "Activities";
-        return "Other";
-    }
-
-    // يطبق التصفية والبحث مع بعض
-    function applyFilters() {
-        var word = searchInput.value.trim().toLowerCase();
-
-        cards.forEach(function (card) {
-            var matchType = currentFilter === "All" || getType(card) === currentFilter;
-            var cardText = getName(card).toLowerCase();
-            var matchSearch = word === "" || cardText.indexOf(word) !== -1;
-
-            if (matchType && matchSearch) {
-                card.style.display = "";
-            } else {
-                card.style.display = "none";
-            }
-        });
-    }
-
-    // الضغط على أزرار التصفية
-    filterButtons.forEach(function (button) {
-        button.addEventListener("click", function () {
-            currentFilter = button.textContent.trim();
-
-            filterButtons.forEach(function (b) { b.classList.remove("active"); });
-            button.classList.add("active");
-
-            applyFilters();
-        });
+  } else if (choice == "za") {
+    cards.sort(function (a, b) {
+      if (getCardName(a) > getCardName(b)) return -1;
+      if (getCardName(a) < getCardName(b)) return 1;
+      return 0;
     });
+  }
+  showCards();
+};
 
-    // البحث أثناء الكتابة
-    searchInput.addEventListener("input", applyFilters);
+// -——— 3) filter buttons + search (extra) -———
+var currentType = "All";
 
+function applyFilters() {
+  var text = searchBox.value.toLowerCase();
 
-});
+  for (var i = 0; i < cards.length; i++) {
+    var typeOk = true;
+    if (currentType == "Workshops") typeOk = getCardType(cards[i]).search(/Workshop/) != -1;
+    if (currentType == "Classes") typeOk = getCardType(cards[i]).search(/Class/) != -1;
+    if (currentType == "Activities") typeOk = getCardType(cards[i]).search(/Activity/) != -1;
+
+    var searchOk = getCardName(cards[i]).toLowerCase().indexOf(text) != -1;
+
+    if (typeOk && searchOk) {
+      cards[i].style.display = "";
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+}
+
+function filterClick() {
+  for (var i = 0; i < filterButtons.length; i++) {
+    filterButtons[i].className = "";
+  }
+  this.className = "active";
+  currentType = this.innerHTML;
+  applyFilters();
+}
+
+for (var i = 0; i < filterButtons.length; i++) {
+  filterButtons[i].onclick = filterClick;
+}
+filterButtons[0].className = "active";
+
+searchBox.onkeyup = applyFilters;
+
+// -——— 4) favourites (heart) -———
+var favList = JSON.parse(localStorage.getItem("favorites"));
+
+if (favList == null) {
+  favList = [];
+  var startNames = ["Table Tales", "Mexican Flavors", "Mystery Basket"];
+  for (var k = 0; k < hearts.length; k++) {
+    var startCard = hearts[k].parentNode.parentNode;
+    for (var n = 0; n < startNames.length; n++) {
+      if (getCardName(startCard) == startNames[n]) {
+        hearts[k].innerHTML = "♥";
+        favList.push({ name: startNames[n], html: startCard.innerHTML });
+      }
+    }
+  }
+  localStorage.setItem("favorites", JSON.stringify(favList));
+}
+
+function findFav(name) {
+  for (var i = 0; i < favList.length; i++) {
+    if (favList[i].name == name) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+function toggleFavorite() {
+  var card = this.parentNode.parentNode;
+  var name = getCardName(card);
+  var index = findFav(name);
+
+  if (index == -1) {
+    this.innerHTML = "♥";
+    favList.push({ name: name, html: card.innerHTML });
+  } else {
+    this.innerHTML = "♡";
+    favList.splice(index, 1);
+  }
+  localStorage.setItem("favorites", JSON.stringify(favList));
+}
+
+for (var i = 0; i < hearts.length; i++) {
+  var card = hearts[i].parentNode.parentNode;
+  if (findFav(getCardName(card)) != -1) {
+    hearts[i].innerHTML = "♥";
+  }
+  hearts[i].onclick = toggleFavorite;
+}
