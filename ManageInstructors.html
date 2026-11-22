@@ -101,7 +101,7 @@
  
         <h1>Manage Team</h1> 
  
-        <form class="team-form"> 
+        <form class="team-form" id="team-form"> 
  
             <table> 
  
@@ -113,48 +113,7 @@
                     </tr> 
                 </thead> 
  
-                <tbody> 
- 
-                    <tr> 
-                        <td> 
-                            <input type="checkbox" name="deleteInstructor" 
-                                   value="1"> 
-                        </td> 
- 
-                        <td> 
-                            <img src="Alya_images/Khalid.jpg" alt="Chef image"> 
-                        </td> 
- 
-                        <td>Khalid</td> 
-                    </tr> 
- 
-                    <tr> 
-                        <td> 
-                            <input type="checkbox" name="deleteInstructor" 
-                                   value="2"> 
-                        </td> 
- 
-                        <td> 
-                            <img src="Alya_images/Manal.jpg" alt="Chef image"> 
-                        </td> 
- 
-                        <td>Manal</td> 
-                    </tr> 
- 
-                    <tr> 
-                        <td> 
-                            <input type="checkbox" name="deleteInstructor" 
-                                   value="3"> 
-                        </td> 
- 
-                        <td> 
-                            <img src="Alya_images/Sara.jpg" alt="Chef image"> 
-                        </td> 
- 
-                        <td>Sara</td> 
-                    </tr> 
- 
-                </tbody> 
+                <tbody id="team-list"></tbody> 
  
             </table> 
  
@@ -274,5 +233,6 @@
     </div> 
  
 </footer> 
+<script src="js/manage.js"></script>
 </body> 
 </html>
