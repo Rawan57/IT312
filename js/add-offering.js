@@ -9,65 +9,50 @@ var priceInput = document.getElementById("Price");
 var descInput = document.getElementById("Description");
 
 form.onsubmit = function () {
+  var nameVal = nameInput.value.replace(/^\s+|\s+$/g, "");
+  var imageVal = imageInput.value;
+  var priceVal = priceInput.value.replace(/^\s+|\s+$/g, "");
+  var descVal = descInput.value.replace(/^\s+|\s+$/g, "");
+  var errors = "";
 
-var nameVal = nameInput.value.trim();
-var priceVal = priceInput.value.trim();
-var descVal = descInput.value.trim();
+  // empty fields
+  if (nameVal == "") errors += "- Please enter the offering name.\n";
+  if (imageVal == "") errors += "- Please choose an offering image.\n";
+  if (priceVal == "") errors += "- Please enter the offering price.\n";
+  if (descVal == "") errors += "- Please enter the offering description.\n";
 
-if (nameVal === "") {
-    alert("Please enter the offering name!");
+  // type of information
+  if (nameVal != "" && nameVal.search(/^\d/) != -1) {
+    errors += "- Offering name cannot start with a number.\n";
+  }
+  if (priceVal != "" && priceVal.search(/^\d+(\.\d+)?$/) == -1) {
+    errors += "- Price must be a number (0 for free offerings).\n";
+  }
+  if (imageVal != "" && imageVal.search(/\.(jpg|jpeg|png|gif|webp)$/i) == -1) {
+    errors += "- The file must be an image (jpg, jpeg, png, gif, webp).\n";
+  }
+
+  if (errors != "") {
+    alert("Please fix the following:\n" + errors);
     return false;
-}
+  }
 
-if (imageInput.files.length === 0) {
-    alert("Please choose an offering image!");
-    return false;
-}
+  // valid -> save in localStorage (array of objects)
+  var offerings = JSON.parse(localStorage.getItem("offerings"));
+  if (offerings == null) {
+    offerings = [];
+  }
 
-if (priceVal === "") {
-    alert("Please enter the offering price!");
-    return false;
-}
+  var parts = imageVal.split(/[\\\/]/);
+  offerings.push({
+    name: nameVal,
+    image: parts[parts.length - 1],
+    price: parseFloat(priceVal),
+    description: descVal
+  });
+  localStorage.setItem("offerings", JSON.stringify(offerings));
 
-if (descVal === "") {
-    alert("Please enter the offering description!");
-    return false;
-}
-
-if (nameVal.search(/^\d/) === 0) {
-    alert("Offering name cannot start with a number!");
-    return false;
-}
-
-if (isNaN(priceVal) || Number(priceVal) < 0) {
-    alert("Price must be a positive number!");
-    return false;
-}
-
-if (imageInput.files[0].type.search(/^image\//) !== 0) {
-    alert("The file must be an image!");
-    return false;
-}
-
-var reader = new FileReader();
-
-reader.onload = function () {
-
-    var offerings = JSON.parse(localStorage.getItem("offerings")) || [];
-
-    offerings.push({
-        name: nameVal,
-        image: reader.result,
-        price: Number(priceVal),
-        description: descVal
-    });
-
-    localStorage.setItem("offerings", JSON.stringify(offerings));
-    alert('Offering "' + nameVal + '" was added successfully!');
-    form.reset();
-};
-
-reader.readAsDataURL(imageInput.files[0]);
-
-return false;
+  alert('Offering "' + nameVal + '" was added successfully!');
+  form.reset();
+  return false;
 };
