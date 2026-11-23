@@ -52,15 +52,20 @@ align-items: center;
 
 .filter-buttons button{
     padding: 8px 30px;
-    border: 1px solid black;
+    border: 1px solid var(--olive);
     border-radius: 20px;
     background-color: var(--white);
-   margin-bottom :10px;
-    color:var(--olive);
+    margin-bottom: 10px;
+    color: var(--olive);
 }
-/* Phase 3 - Offerings: active filter button */
 .filter-buttons button.active {
     background-color: var(--olive);
+    color: var(--white);
+}
+body.dark .filter-buttons button {
+    color: var(--olive);
+}
+body.dark .filter-buttons button.active {
     color: var(--white);
 }
 .offerings{
