@@ -159,5 +159,5 @@ body.dark .location img,
 body.dark .price img {
     background-color: var(--olive);
     border-radius: 50%;
-    padding: 3px;
+    padding: 6px;
 }
