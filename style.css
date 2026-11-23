@@ -165,9 +165,12 @@ body.dark .price img {
 @media (max-width: 768px) {
     .navbar nav {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 16px;
+    }
+    .navbar a {
+        font-size: 14px;
     }
     .sep {
         display: none;
