@@ -73,14 +73,14 @@
         <a href="Offering.html">Club Offerings</a> | 
         <a href="about_us.html">About us</a> | 
         <a href="club_member_dashboard.html">Member Dashboard</a> | 
-        <a href="Club Manager Dashboard.html">Manager Dashboard</a> 
+        <a href="ClubManagerDashboard.html">Manager Dashboard</a> 
     </nav> 
 </div> 
  
  <!-- Breadcrumb Navigation -->
 <nav class="breadcrumb">
     <a href="Home.html">Home</a> &gt;
-    <a href="Club Manager Dashboard.html">Manager Dashboard</a> &gt;
+    <a href="ClubManagerDashboard.html">Manager Dashboard</a> &gt;
  Manage Instructors
  
 </nav>
@@ -91,7 +91,7 @@
 
  <br>
     <div class="manage-breadcrumb"> 
-        <a href="Club Manager Dashboard.html">&lt;Back</a> 
+        <a href="ClubManagerDashboard.html">&lt;Back</a> 
     </div> 
  
  
@@ -101,7 +101,7 @@
  
         <h1>Manage Team</h1> 
  
-        <form class="team-form"> 
+        <form class="team-form" id="team-form"> 
  
             <table> 
  
@@ -113,48 +113,7 @@
                     </tr> 
                 </thead> 
  
-                <tbody> 
- 
-                    <tr> 
-                        <td> 
-                            <input type="checkbox" name="deleteInstructor" 
-                                   value="1"> 
-                        </td> 
- 
-                        <td> 
-                            <img src="Alya_images/Khalid.jpg" alt="Chef image"> 
-                        </td> 
- 
-                        <td>Khalid</td> 
-                    </tr> 
- 
-                    <tr> 
-                        <td> 
-                            <input type="checkbox" name="deleteInstructor" 
-                                   value="2"> 
-                        </td> 
- 
-                        <td> 
-                            <img src="Alya_images/Manal.jpg" alt="Chef image"> 
-                        </td> 
- 
-                        <td>Manal</td> 
-                    </tr> 
- 
-                    <tr> 
-                        <td> 
-                            <input type="checkbox" name="deleteInstructor" 
-                                   value="3"> 
-                        </td> 
- 
-                        <td> 
-                            <img src="Alya_images/Sara.jpg" alt="Chef image"> 
-                        </td> 
- 
-                        <td>Sara</td> 
-                    </tr> 
- 
-                </tbody> 
+                <tbody id="team-list"></tbody> 
  
             </table> 
  
@@ -173,26 +132,26 @@
  
         <h1>Add New Instructor</h1> 
  
-        <form class="instructor-form"> 
+        <form class="instructor-form" id="instructor-form"> 
  
             <!-- Left Column --> 
  
             <div class="instructor-left">
                 <label for="instructor-name">Name</label> 
                 <input type="text" id="instructor-name" 
-                       name="name" required> 
+                       name="name"> 
  
                 <label for="instructor-dob">Date Of Birth</label> 
                 <input type="date" id="instructor-dob" 
-                       name="dateOfBirth" required> 
+                       name="dateOfBirth" > 
  
                 <label for="instructor-education">Education</label> 
                 <input type="text" id="instructor-education" 
-                       name="education" required> 
+                       name="education" > 
  
                 <label for="instructor-expertise">Expertise</label> 
                 <input type="text" id="instructor-expertise" 
-                       name="expertise" required> 
+                       name="expertise" > 
  
                 <div class="add-button"> 
                     <input type="submit" value="Add" class="button"> 
@@ -207,15 +166,15 @@
  
                 <label for="instructor-photo">Photo</label> 
                 <input type="file" id="instructor-photo" 
-                       name="photo" accept="image/*" required> 
+                       name="photo" accept="image/*"> 
  
                 <label for="instructor-email">Email</label> 
                 <input type="email" id="instructor-email" 
-                       name="email" required> 
+                       name="email" > 
  
                 <label for="instructor-skills">Skills</label> 
                 <input type="text" id="instructor-skills" 
-                       name="skills" required> 
+                       name="skills"> 
  
                 <label for="instructor-about">About Me</label> 
                 <textarea id="instructor-about" 
@@ -274,5 +233,6 @@
     </div> 
  
 </footer> 
+<script src="js/manage.js"></script>
 </body> 
 </html>

@@ -2,6 +2,7 @@
 <html  lang="en">
 <head>
 <meta charset="UTF-8">
+<title>Taste Journey-Club Offerings</title>
 <style>
   
     .search {
@@ -25,6 +26,13 @@
     font-size: 28px;
     color: gray;
 } 
+    .search input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M6 6l12 12M18 6L6 18' stroke='%2345451F' stroke-width='3' stroke-linecap='round'/></svg>") no-repeat center;
+}
 
 .sort{
      display: flex;
@@ -47,13 +55,18 @@ align-items: center;
     border: 1px solid black;
     border-radius: 20px;
     background-color: white;
-     margin-bottom: 10px;
-     color:var(--olive)
+   margin-bottom :10px;
+    color:var(--olive);
+}
+/* Phase 3 - Offerings: active filter button */
+.filter-buttons button.active {
+    background-color: var(--olive);
+    color: var(--white);
 }
 .offerings{
     display: flex;
    flex-wrap: wrap;
-   justify-content: space-between;
+   justify-content: flex-start;
     gap: 25px;
    margin-bottom: 40px;
 }
@@ -63,6 +76,8 @@ align-items: center;
     border-radius: 18px;
    padding: 5px;
    overflow: hidden;
+   display: flex;
+    flex-direction: column;
 }
 .food-img {
     width: 100%;
@@ -100,7 +115,8 @@ align-items: center;
     position: relative;
 }
 .card .location {
-    margin-top: 20px;
+    margin-top: auto;
+    padding-top: 20px;
 }
 .card-description {
     color: #555;
@@ -146,15 +162,15 @@ align-items: center;
         <a href="Offering.html">Club Offerings</a> | 
         <a href="about_us.html">About us</a> | 
         <a href="club_member_dashboard.html">Member Dashboard</a> | 
-        <a href="Club Manager Dashboard.html">Manager Dashboard</a> 
+        <a href="ClubManagerDashboard.html">Manager Dashboard</a> 
 
 </nav>
 </div>
   <nav class="breadcrumb">
     <a href="Home.html">Home</a> &gt;Club Offerings
-    
+   </nav> 
 <main>
-<h2>Our Cuisines</h2>
+<h1>Our Cuisines</h1>
 <div class="search">
     <input type="search" placeholder="Search about cuisines">
     <span class="search-icon">⌕</span>
@@ -170,6 +186,7 @@ align-items: center;
 <div class="sort">
     <label for="sort">Sort by</label>
    <select id="sort" name="sort">
+    <option value="" selected disabled>Choose...</option>
     <optgroup label="Price">
         <option value="low">Low to High</option>
         <option value="high">High to Low</option>
@@ -182,18 +199,18 @@ align-items: center;
 </select>
 </div>
 </div>
-<div class="offerings">
+<div class="offerings" id="offerings-list">
  <div class="card">
         <img class="food-img" src="images/table.jpg" alt="Table Tales">
         <p class="chef"> 
             <img src="images/chef1.jpg" alt="Chef"> Chef Khled</p>
-        <h2><a href="Table Details.html">Table Tales</a></h2>
+        <h2><a href="TableDetails.html">Table Tales</a></h2>
         <p>Japanese Table Styling Workshop</p>
         <p class="card-description">Learn how to create beautiful Japanese table settings.</p>
         <p class="location"><img src="images/location-pin.png" alt="Location"> Taste Journey Studio</p>
         <div class="card-bottom">
             <span class="price"><img src="images/money.png" alt="Price"> 100 SR</span>
-            <span class="heart">♡</span>
+          <span class="heart">♡</span>
         </div>
     </div>
     <div class="card">
@@ -206,7 +223,7 @@ align-items: center;
         <p class="location"><img src="images/location-pin.png" alt="Location"> Taste Journey Studio</p>
         <div class="card-bottom">
             <span class="price"><img src="images/money.png" alt="Price"> 120 SR</span>
-            <span class="heart">♡</span>
+          <span class="heart">♡</span>
         </div>
     </div>
      <div class="card">
@@ -219,7 +236,7 @@ align-items: center;
         <p class="location"><img src="images/location-pin.png" alt="Location"> Taste Journey Studio</p>
         <div class="card-bottom">
             <span class="price"><img src="images/money.png" alt="Price"> 180 SR</span>
-            <span class="heart">♡</span>
+          <span class="heart">♡</span>
         </div>
     </div>
     <div class="card">
@@ -232,33 +249,33 @@ align-items: center;
         <p class="location"><img src="images/location-pin.png" alt="Location"> Taste Journey Studio</p>
         <div class="card-bottom">
             <span class="price"><img src="images/money.png" alt="Price"> 165 SR</span>
-               <span class="heart">♡</span>
+           <span class="heart">♡</span>
         </div>
     </div>
     <div class="card">
         <img class="food-img" src="images/world.jpg" alt="Passport to Flavor">
         <p class="chef"> 
             <img src="images/chef2.jpg" alt="Chef"> Chef Sara</p>
-        <h2><a href="Passport to Flavor.html">Passport to Flavor</a></h2>
+        <h2><a href="PassporttoFlavor.html">Passport to Flavor</a></h2>
         <p>Cooking Activity</p>
         <p class="card-description">Explore and create flavorful sauces from around the world.</p>
         <p class="location"><img src="images/location-pin.png" alt="Location">  Taste Journey Studio</p>
         <div class="card-bottom">
             <span class="price"><img src="images/money.png" alt="Price"> 180 SR</span>
-              <span class="heart">♡</span>
+             <span class="heart">♡</span>
         </div>
     </div>
      <div class="card">
         <img class="food-img" src="images/maxican.jpg" alt="Mexican Flavors">
         <p class="chef"> 
             <img src="images/chef3.jpg" alt="Chef"> Chef Manal</p>
-        <h2><a href="Mexican Flavors.html">Mexican Flavors</a></h2>
+        <h2><a href="MexicanFlavors.html">Mexican Flavors</a></h2>
         <p>Mexican Cooking Class</p>
         <p class="card-description">Discover how to make tasty tacos and quesadillas.</p>
         <p class="location"><img src="images/location-pin.png" alt="Location"> Taste Journey Studio</p>
         <div class="card-bottom">
             <span class="price"><img src="images/money.png" alt="Price"> 120 SR</span>
-            <span class="heart">♡</span>
+           <span class="heart">♡</span>
         </div>
     </div>
 </div>
@@ -298,7 +315,7 @@ align-items: center;
 </footer>
 
 
-
+<script src="js/offering.js"></script>
 
 </body>
 

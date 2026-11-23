@@ -61,7 +61,7 @@
         .offerings{
     display: flex;
    flex-wrap: wrap;
-   justify-content: space-between;
+   justify-content:flex-start;
     gap: 25px;
    margin-bottom: 40px;
 }
@@ -71,6 +71,8 @@
     border-radius: 18px;
    padding: 5px;
    overflow: hidden;
+     display: flex;
+    flex-direction: column;
 }
 .food-img {
     width: 100%;
@@ -108,7 +110,8 @@
     position: relative;
 }
 .card .location {
-    margin-top: 20px;
+    margin-top: auto;
+    padding-top: 20px;
 }
 .heart {
     color: red;
@@ -138,6 +141,7 @@
 }
     </style>
 </head>
+ <body>
 <header>
     <div class="logo">
         <img src="images/loogo.png" alt="logo">
@@ -151,7 +155,7 @@
         <a href="Offering.html">Club Offerings</a> | 
         <a href="about_us.html">About us</a> | 
         <a href="club_member_dashboard.html">Member Dashboard</a> | 
-        <a href="Club Manager Dashboard.html">Manager Dashboard</a> 
+        <a href="ClubManagerDashboard.html">Manager Dashboard</a> 
     </nav>
 </div>
 
@@ -161,7 +165,7 @@
     </nav>
 
       
-    <body>
+   
         <main class="dashboard">
 
             <h1>My participation Requires</h1>
@@ -198,12 +202,12 @@
             </table>
             <!-- Favourite Offerings -->
              <h1>My Favourite </h1>
-             <div class="offerings">
+             <div class="offerings" id="favourite-list">
        <div class="card">
         <img class="food-img" src="images/table.jpg" alt="Table Tales">
         <p class="chef"> 
             <img src="images/chef1.jpg" alt="Chef"> Chef Khled</p>
-        <h2><a href="Table Details.html">Table Tales</a></h2>
+        <h2><a href="TableDetails.html">Table Tales</a></h2>
         <p>Japanese Table Styling Workshop</p>
         <p class="card-description">Learn how to create beautiful Japanese table settings.</p>
         <p class="location"><img src="images/location-pin.png" alt="Location"> Taste Journey Studio</p>
@@ -216,7 +220,7 @@
         <img class="food-img" src="images/maxican.jpg" alt="Mexican Flavors">
         <p class="chef"> 
             <img src="images/chef3.jpg" alt="Chef"> Chef Manal</p>
-        <h2><a href="Mexican Flavors.html">Mexican Flavors</a></h2>
+        <h2><a href="MexicanFlavors.html">Mexican Flavors</a></h2>
         <p>Mexican Cooking Class</p>
          <p class="card-description">Discover how to make tasty tacos and quesadillas.</p>
         <p class="location"><img src="images/location-pin.png" alt="Location"> Taste Journey Studio</p>
@@ -239,7 +243,7 @@
         </div>
     </div>
     </div>
-            </section>
+           
             <!-- Dashboard Links -->
             <section class="dashboard-links">
                 <a href="Request.html">
@@ -252,7 +256,7 @@
                 </a>
             </section>
         </main>
-    </body>
+    
 
     <footer>
     <div class="footer-content">
@@ -277,10 +281,11 @@
         &copy; 2026 Taste Journey
     </div>
 </footer>
-
+<script src="js/favourites.js"></script>
+</body>
 </html>
 
-<style>
+
   
 
   

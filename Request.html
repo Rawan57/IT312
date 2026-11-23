@@ -3,7 +3,7 @@
 <html  lang="en">
 <head>
 <meta charset="UTF-8">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
 
@@ -87,8 +87,15 @@ main h1 {
   border-radius: 15px;
   cursor: pointer;
 }
+#my-requests {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
 
-
+#my-requests table {
+  width: 100%;
+}
 
 
 </style>
@@ -111,7 +118,7 @@ main h1 {
         <a href="Offering.html">Club Offerings</a> | 
         <a href="about_us.html">About us</a> | 
         <a href="club_member_dashboard.html">Member Dashboard</a> | 
-        <a href="Club Manager Dashboard.html">Manager Dashboard</a> 
+        <a href="ClubManagerDashboard.html">Manager Dashboard</a> 
 </nav>
 </div>
 
@@ -132,11 +139,11 @@ main h1 {
 
   <h1>Request to join an offering</h1>
 
-  <form action="#" method="post" class="request-form">
+  <form action="#" method="post" class="request-form" id="request-form" >
 
     <label for="offering">Choose the Offering</label>
     <div class="select-box">
-      <select id="offering" name="offering" required>
+      <select id="offering" name="offering" >
         <option value="" selected disabled>select the offering......</option>
         <option value="table-tales">Table Tales</option>
         <option value="japanese-cuisine">The Art of Japanese Cuisine</option>
@@ -149,13 +156,14 @@ main h1 {
     </div>
 
     <label for="fullname">Full Name</label>
-    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" >
 
     <label for="prefdate">Preferred Date</label>
-    <input type="date" id="prefdate" name="prefdate" required>
+    <input type="date" id="prefdate" name="prefdate" >
 
     <button type="submit">Submit</button>
   </form>
+  <section id="my-requests"></section>
 </main>
 
 <footer>
@@ -193,7 +201,7 @@ main h1 {
 </footer>
 
 
-
+<script src="js/request.js"></script> 
 
 </body>
 

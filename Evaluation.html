@@ -2,7 +2,7 @@
 <html  lang="en">
 <head>
 <meta charset="UTF-8">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
 .breadcrumb {
@@ -54,7 +54,7 @@ main h1 {
   padding: 18px 25px;
   font-size: 18px;
   font-family: inherit;
-  border: 2px solid #000;
+  border: 2px solid var(--espresso);
   border-radius: 40px;
 }
 
@@ -122,13 +122,23 @@ main h1 {
   padding: 14px 60px;
   font-size: 20px;
   font-weight: bold;
-  border: 2px solid #000;
+  border: 2px solid var(--espresso);
   border-radius: 15px;
   cursor: pointer;
 }
 
 
+.evaluation-form select.error,
+.evaluation-form textarea.error {
+  border-color: #d32f2f;
+  background-color: #fdecea;
+}
 
+.options-row.error {
+  outline: 2px solid #d32f2f;
+  border-radius: 10px;
+  padding: 6px;
+}
  
 </style>
 
@@ -153,7 +163,7 @@ main h1 {
         <a href="Offering.html">Club Offerings</a> | 
         <a href="about_us.html">About us</a> | 
         <a href="club_member_dashboard.html">Member Dashboard</a> | 
-        <a href="Club Manager Dashboard.html">Manager Dashboard</a> 
+        <a href="ClubManagerDashboard.html">Manager Dashboard</a> 
 
 </nav>
 </div>
@@ -177,7 +187,10 @@ main h1 {
 
   <h1>Offering Evaluation</h1>
 
-  <form action="#" method="post" class="evaluation-form">
+  <form action="#" method="post" class="evaluation-form" id="evaluation-form" novalidate>
+
+    
+<div class="options-row" id="rating-row"></div>
 
     <label for="offering">Choose the Completed Offering</label>
     <div class="select-box">
@@ -186,7 +199,7 @@ main h1 {
         <option value="table-tales">Table Tales</option>
         <option value="japanese-cuisine">The Art of Japanese Cuisine</option>
         <option value="mystery-basket">Mystery Basket</option>
-        <option value="pasta-prosecco">Italian pasta</option>
+        <option value="pasta-prosecco">Italian Pasta</option>
         <option value="passport-to-flavor">Passport to Flavor</option>
         <option value="mexican-flavors">Mexican Flavors</option>
       </select>
@@ -259,6 +272,7 @@ main h1 {
 
 
 
+<script src="js/evaluation.js"></script>
 
 </body>
 
