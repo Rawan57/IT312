@@ -121,7 +121,7 @@
 
     <h1>Add New Offering</h1>
 
-    <form class="offering-form">
+    <form class="offering-form" id="OfferingForm" novalidate>
 
         <fieldset>
 
@@ -130,16 +130,16 @@
             <div class="offering-basic">
 
                 <h3>Offering Name</h3>
-                <input type="text" placeholder="Enter offering name" required>
+                <input type="text" id="Name" placeholder="Enter offering name" required>
 
                 <h3>Image</h3>
-                <input type="file" accept="image/*">
+                <input type="file" id="Image" accept="image/*">
 
                 <h3>Price</h3>
-                <input type="number" min="0" placeholder="Enter price" required>
+                <input type="number" min="0" id="Price" placeholder="Enter price" required>
 
                 <h3>Description</h3>
-                <textarea placeholder="Add description"></textarea>
+                <textarea placeholder="Add description" id="Description" ></textarea>
 
             </div>
 
@@ -204,35 +204,37 @@
 </main>
 
 <footer>
-<div class="footer-content">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="images/loogo.png" alt="">
+            <span>Taste Journey</span>
+        </div>
 
-<div class="footer-logo">
-      <img src="images/loogo.png" alt="">
-    <span>Taste Journey</span>
-   
-</div>
-<div class="footer-Email">
-    <strong>Contact</strong><br>
-    <a href="mailto:info@TasteJourny.edu">info@TasteJourny.edu</a>
-</div>
-<div class="Social">
-   <strong>Follow us</strong> 
-   <div class="Social-img">
-    <a href="#">
-        <img src="images/instagram.png" alt="">
-   </a>
-      <a href="#">
-        <img src="images/twitter.png" alt="">
-      </a>
-      <a href="#">
-        <img src="images/linkedin.png" alt="">
-      </a>
-   </div>
-</div>
-</div>
+        <div class="footer-Email">
+            <strong>Contact</strong><br>
+            <a href="mailto:info@TasteJourny.edu">
+                info@TasteJourny.edu
+            </a>
+        </div>
 
-<div class="copyright">
-    &copy; 2026 Taste Journey
-</div>
+        <div class="Social">
+            <strong>Follow us</strong>
 
+            <div class="Social-img">
+                <a href="#"><img src="images/instagram.png" alt=""></a>
+                <a href="#"><img src="images/twitter.png" alt=""></a>
+                <a href="#"><img src="images/linkedin.png" alt=""></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        &copy; 2026 Taste Journey
+    </div>
 </footer>
+
+<script src="js/add-offering.js"></script>
+
+</body>
+</html>
