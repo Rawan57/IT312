@@ -164,15 +164,10 @@ body.dark .price img {
 }
 @media (max-width: 768px) {
     .navbar nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px 16px;
+        text-align: center;
+        line-height: 1.8;
     }
     .navbar a {
-        font-size: 14px;
-    }
-    .sep {
-        display: none;
+        font-size: 13px;
     }
 }
