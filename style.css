@@ -170,4 +170,13 @@ body.dark .price img {
     .navbar a {
         font-size: 13px;
     }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 20px;
+    }
+    .footer-logo {
+        justify-content: center;
+    }
 }
