@@ -56,5 +56,5 @@ document.getElementById("joinForm").onsubmit = validateJoinForm;
 
 
 if (localStorage.getItem("theme") == "dark") {
-  document.body.classList.add("dark");
+document.body.className = "dark";
 }

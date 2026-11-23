@@ -155,5 +155,5 @@ for (var i = 0; i < hearts.length; i++) {
 }
 
 if (localStorage.getItem("theme") == "dark") {
-  document.body.classList.add("dark");
+document.body.className = "dark";
 }
