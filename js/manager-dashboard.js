@@ -1,25 +1,25 @@
 if (localStorage.getItem("theme") == "dark") {
-document.body.className = "manager-body dark";
+  document.body.className = "manager-body dark";
 }
 
 var offeringsList = document.getElementById("offeringsList");
 
-var offerings = JSON.parse(localStorage.getItem("offerings")) || [];
+var offerings = JSON.parse(localStorage.getItem("offerings"));
+if (offerings == null) {
+  offerings = [];
+}
 
 for (var i = 0; i < offerings.length; i++) {
+  var row = document.createElement("tr");
 
-var row = document.createElement("tr");
+  var nameCell = document.createElement("td");
+  nameCell.innerHTML = offerings[i].name;
 
-var nameCell = document.createElement("td");
-nameCell.colSpan = 2;
-nameCell.textContent = offerings[i].name;
+  var priceCell = document.createElement("td");
+  priceCell.innerHTML = offerings[i].price + " SAR";
 
-var priceCell = document.createElement("td");
-priceCell.colSpan = 3;
-priceCell.textContent = offerings[i].price + " SAR";
+  row.appendChild(nameCell);
+  row.appendChild(priceCell);
 
-row.appendChild(nameCell);
-row.appendChild(priceCell);
-
-offeringsList.appendChild(row);
+  offeringsList.appendChild(row);
 }
