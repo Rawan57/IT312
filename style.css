@@ -16,6 +16,25 @@ body {
      background-color: var(--cream);
       color: var(--espresso);
      }
+     
+
+/* Dark Theme */
+body.dark {
+    --cream: #1f1d14;
+    --olive: #d9c98a;
+    --gold: #c9a56a;
+    --sand: #34301f;
+    --espresso: #f1ead8;
+    --white: #2a2718;
+}
+
+body.dark button,
+body.dark .button,
+body.dark th {
+    color: #1f1d14;
+}
+
+
 /* Main Headings */
  h1, h2 {
      font-family: Georgia, serif; 

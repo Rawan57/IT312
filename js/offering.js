@@ -153,3 +153,7 @@ for (var i = 0; i < hearts.length; i++) {
   }
   hearts[i].onclick = toggleFavorite;
 }
+
+if (localStorage.getItem("theme") == "dark") {
+  document.body.classList.add("dark");
+}

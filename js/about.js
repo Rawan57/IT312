@@ -53,3 +53,8 @@ function validateJoinForm() {
 
 // Connect the form to the validation function
 document.getElementById("joinForm").onsubmit = validateJoinForm;
+
+
+if (localStorage.getItem("theme") == "dark") {
+  document.body.classList.add("dark");
+}

@@ -6,34 +6,59 @@
 <meta charset="UTF-8">
  <link rel="stylesheet" href="style.css">
 <title>Taste Journey</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
   .home-hero { display: flex; align-items: center; gap: 10px; padding: 40px 5%; }
   .home-hero-text { flex: 1; }
   .home-hero-text h1 { margin-bottom: 16px; font-size: 2.5rem; }
   .home-hero img { width: 70%;   border-radius: 6px;  object-fit: cover; }
-  .home-btn { display: inline-block; padding: 12px 40px; border: 2px solid #000; border-radius: 30px; text-decoration: none; color: #000; font-weight: bold; }
+  .home-btn { display: inline-block; padding: 12px 40px; border: 2px solid var(--espresso); border-radius: 30px; text-decoration: none; color:var(--espresso) ; font-weight: bold; }
 
-  .home-know { display: flex; align-items: center; gap: 30px; padding: 24px 5%; border-top: 1px solid #000; border-bottom: 1px solid #000; }
+  .home-know { display: flex; align-items: center; gap: 30px; padding: 24px 5%; border-top: 1px solid var(--espresso); border-bottom: 1px solid var(--espresso); }
   .home-know img {max-width: 45%;  width: 400px; height: 200px; border-radius: 6px;  object-fit: cover; }
 
   .home-cuisines, .home-reviews { padding: 24px 5%; }
   .home-cards, .home-review-list { display: flex; gap: 25px; flex-wrap: wrap; margin-top: 16px; }
-  .home-card { border: 2px solid #000; border-radius: 12px; padding: 12px ; height: 100%; box-sizing: border-box; }
+  .home-card { border: 2px solid var(--espresso); border-radius: 12px; padding: 12px ; height: 100%; box-sizing: border-box; }
   .home-card-link {flex: 1; min-width: 220px; text-decoration: none; color: inherit; }
   .home-card-link:hover .home-card { box-shadow: 0 4px 8px rgba(0,0,0,0.25); }
   .home-card img { width: 100%; height: 210px; object-fit: cover; border-radius: 12px; }
   .home-card-link:hover .home-card img { transform: scale(1.08); }
   .home-card h3 { margin: 12px 0 6px; text-decoration: underline; }
-  .home-review { flex: 1;  min-height: 100px; margin: 0;font-size: 1rem; border: 2px solid #000; border-radius: 16px; padding: 14px 10px; }
+  .home-review { flex: 1;  min-height: 100px; margin: 0;font-size: 1rem; border: 2px solid var(--espresso); border-radius: 16px; padding: 14px 10px; }
   .home-stars { color: #999; font-size: 1.4rem; }
   .home-card { overflow: hidden; }
 .home-card-extra { display: none; margin-top: 10px; }
 .home-card-link:hover .home-card-extra { display: block; }
+
+
+  img { max-width: 100%; }
+
+  #theme-btn { margin-left: auto; }
+
+  #back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+  }
+
+  #clock { text-align: center; padding: 8px; font-weight: bold; }
+
+  @media (max-width: 768px) {
+    .home-hero, .home-know { flex-direction: column; }
+    .home-hero img, .home-know img { width: 100%; max-width: 100%; height: auto; }
+    .home-card-link { min-width: 100%; }
+    .home-card-extra { display: block; }
+  }
+
 </style>
 
 </head>
 <body>
+
 <header>
 <div class="logo">
     <img src="images/loogo.png" alt="logo">
@@ -42,6 +67,7 @@
 
 </div>
 
+ <button id="theme-btn">Dark Theme</button>
 
 
 </header>
@@ -53,7 +79,7 @@
         <a href="about_us.html">About us</a> | 
         <a href="club_member_dashboard.html">Member Dashboard</a> | 
         <a href="ClubManagerDashboard.html">Manager Dashboard</a> 
-
+      
 </nav>
 </div>
 
@@ -145,7 +171,7 @@
 </main>
 
 
-
+<button id="back-to-top">↑ Top</button>
 
 
 <footer>
@@ -176,9 +202,12 @@
 </div>
 </div>
 
+<div id="clock"></div>
+
 <div class="copyright">
     &copy; 2026 Taste Journey
 </div>
+
 
 </footer>
 
@@ -186,4 +215,6 @@
 
 
 </body>
+
+ <script src="js/home.js"></script> 
 </html>

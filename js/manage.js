@@ -121,3 +121,7 @@ instructorForm.onsubmit = function () {
   instructorForm.reset();
   return false;
 };
+
+if (localStorage.getItem("theme") == "dark") {
+  document.body.classList.add("dark");
+}
