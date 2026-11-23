@@ -11,15 +11,16 @@
     padding: 10px 2%; 
 }
 
-
-.offering-breadcrumb a {
+.offering-breadcrumb  a {
     color: var(--olive);
+  
 }
 
 .offering-breadcrumb span {
     color: var(--espresso);
     font-weight: bold;
 }
+
 
 .offering-form fieldset {
     border: 2px solid var(--olive);
@@ -121,7 +122,7 @@
 
     <h1>Add New Offering</h1>
 
-    <form class="offering-form" id="OfferingForm" novalidate>
+    <form class="offering-form" id="OfferingForm">
 
         <fieldset>
 
@@ -130,7 +131,7 @@
             <div class="offering-basic">
 
                 <h3>Offering Name</h3>
-                <input type="text" id="Name" placeholder="Enter offering name" required>
+                <input type="text" id="Name" placeholder="Enter offering name" >
 
                 <h3>Image</h3>
                 <input type="file" id="Image" accept="image/*">
@@ -154,7 +155,7 @@
                     <div class="offering-types">
 
                         <label>
-                            <input type="radio" value="Class" name="type" required>
+                            <input type="radio" value="Class" name="type" >
                             Class
                         </label>
 
@@ -171,23 +172,23 @@
                     </div>
 
                     <h3>Date</h3>
-                    <input type="date">
+                    <input type="date" id="OfferingDate">
 
                     <h3>Time</h3>
-                    <input type="time">
+                    <input type="time" id="OfferingTime">
 
                 </div>
 
                 <div class="offering-right">
 
                     <h3>About This Offering</h3>
-                    <textarea></textarea>
+                    <textarea id="About"></textarea>
 
                     <h3>What You Will Learn</h3>
-                    <textarea></textarea>
+                    <textarea id="Learn"></textarea>
 
                     <h3>Main Ingredients</h3>
-                    <textarea></textarea>
+                    <textarea id="Ingredients"></textarea>
 
                 </div>
 
