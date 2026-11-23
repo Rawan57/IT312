@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Member Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <style>
@@ -139,6 +139,14 @@
     font-size: 11px;
     font-weight: bold;
 }
+@media (max-width: 768px) {
+  .offerings { justify-content: center; }
+  .card { width: 100%; max-width: 360px; }
+  .food-img { height: 200px; }
+  .card p, .card-description { font-size: 14px; }
+  table { width: 95%; font-size: 14px; }
+  .dashboard-links a { width: 90%; }
+}
     </style>
 </head>
  <body>
@@ -151,10 +159,10 @@
 
 <div class="navbar">
     <nav>
-        <a href="Home.html">Home</a> | 
-        <a href="Offering.html">Club Offerings</a> | 
-        <a href="about_us.html">About us</a> | 
-        <a href="club_member_dashboard.html">Member Dashboard</a> | 
+        <a href="Home.html">Home</a> <span class="sep">|</span> 
+        <a href="Offering.html">Club Offerings</a> <span class="sep">|</span> 
+        <a href="about_us.html">About us</a> <span class="sep">|</span> 
+        <a href="club_member_dashboard.html">Member Dashboard</a> <span class="sep">|</span> 
         <a href="ClubManagerDashboard.html">Manager Dashboard</a> 
     </nav>
 </div>
@@ -206,7 +214,7 @@
        <div class="card">
         <img class="food-img" src="images/table.jpg" alt="Table Tales">
         <p class="chef"> 
-            <img src="images/chef1.jpg" alt="Chef"> Chef Khled</p>
+            <img src="images/chef1.jpg" alt="Chef"> Chef Khaled</p>
         <h2><a href="TableDetails.html">Table Tales</a></h2>
         <p>Japanese Table Styling Workshop</p>
         <p class="card-description">Learn how to create beautiful Japanese table settings.</p>
@@ -245,7 +253,7 @@
     </div>
            
             <!-- Dashboard Links -->
-            <section class="dashboard-links">
+            <div class="dashboard-links">
                 <a href="Request.html">
                     Request to Join an Offering  >
                     
@@ -254,7 +262,7 @@
                     Evaluate a Completed Offering  >
                    
                 </a>
-            </section>
+            </div>
         </main>
     
 

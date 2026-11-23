@@ -153,3 +153,26 @@ tr:nth-child(even) td {
      border: 1px solid var(--olive);
       text-align: center; 
       padding: 12px; }
+
+body.dark .details-info img,
+body.dark .location img,
+body.dark .price img {
+    background-color: var(--olive);
+    border-radius: 50%;
+    padding: 6px;
+    box-sizing: content-box;
+}
+@media (max-width: 768px) {
+    .navbar nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 16px;
+    }
+    .navbar a {
+        font-size: 14px;
+    }
+    .sep {
+        display: none;
+    }
+}

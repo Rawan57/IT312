@@ -1,5 +1,3 @@
-
-
 var form = document.getElementById("evaluation-form");
 var offeringMenu = document.getElementById("offering");
 var feedbackBox = document.getElementById("feedback");
@@ -9,28 +7,34 @@ form.onsubmit = function () {
   var errors = "";
 
   // remove old highlights
-  offeringMenu.classList.remove("error");
-  feedbackBox.classList.remove("error");
-  ratingRow.classList.remove("error");
+  offeringMenu.className = "";
+  feedbackBox.className = "";
+  ratingRow.className = "options-row";
 
   // offering selected
   if (offeringMenu.value == "") {
     errors += "- Please choose the completed offering.\n";
-    offeringMenu.classList.add("error");
+    offeringMenu.className = "error";
   }
 
   // rating selected
-  var ratingInput = document.querySelector('input[name="rating"]:checked');
+  var ratingInput = null;
+  var ratingBoxes = document.getElementsByName("rating");
+  for (var i = 0; i < ratingBoxes.length; i++) {
+    if (ratingBoxes[i].checked) {
+      ratingInput = ratingBoxes[i];
+    }
+  }
   if (ratingInput == null) {
     errors += "- Please select a rating.\n";
-    ratingRow.classList.add("error");
+    ratingRow.className = "options-row error";
   }
 
-  //feedback written
-var feedback = feedbackBox.value.trim();
-if (feedback == "") {
+  // feedback written
+  var feedback = feedbackBox.value.replace(/^\s+|\s+$/g, "");
+  if (feedback == "") {
     errors += "- Please write your feedback.\n";
-    feedbackBox.classList.add("error");
+    feedbackBox.className = "error";
   }
 
   if (errors != "") {
@@ -39,11 +43,11 @@ if (feedback == "") {
   }
 
   // good rating (4 or 5) thank you, otherwise apology
-  var rating = Number(ratingInput.value);
+  var rating = parseInt(ratingInput.value);
   if (rating >= 4) {
-    alert("Thank you for feedback!.");
+    alert("Thank you for your feedback!");
   } else {
-    alert("We are sorry . We will work on improving it.");
+    alert("We are sorry. We will work on improving it.");
   }
 
   window.location.href = "club_member_dashboard.html";
@@ -51,5 +55,5 @@ if (feedback == "") {
 };
 
 if (localStorage.getItem("theme") == "dark") {
-  document.body.classList.add("dark");
+  document.body.className = "dark";
 }

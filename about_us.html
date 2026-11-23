@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Taste Journey - About Us</title>
 
     <link rel="stylesheet" href="style.css">
@@ -143,10 +143,10 @@
 
     <div class="navbar">
         <nav>
-            <a href="Home.html">Home</a> |
-            <a href="Offering.html">Club Offerings</a> |
-            <a href="about_us.html">About us</a> |
-            <a href="club_member_dashboard.html">Member Dashboard</a> |
+            <a href="Home.html">Home</a> <span class="sep">|</span>
+            <a href="Offering.html">Club Offerings</a> <span class="sep">|</span>
+            <a href="about_us.html">About us</a> <span class="sep">|</span>
+            <a href="club_member_dashboard.html">Member Dashboard</a> <span class="sep">|</span>
             <a href="ClubManagerDashboard.html">Manager Dashboard</a>
         </nav>
     </div>
@@ -156,8 +156,9 @@
     </nav>
 
     <main class="container">
+        
         <section class="mission">
-            <h2>Our Mission</h2>
+            <h1>Our Mission</h1>
             <p>
                 Our cooking club aims to help people develop cooking skills, discover new interests, express their
                 creativity, and connect with others through cooking experiences.
@@ -195,31 +196,31 @@
 
                 <div class="form-group">
                     <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" required> 
                 </div>
                 <div class="form-group">
                     <label for="photo">Photo</label>
-                    <input type="file" id="photo" name="photo" accept="image/*" >
+                    <input type="file" id="photo" name="photo" accept="image/*" required> 
                 </div>
                 <div class="form-group">
                     <label for="dob">Date of Birth</label>
-                    <input type="date" id="dob" name="dob">
+                    <input type="date" id="dob" name="dob" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
                     <label for="expertise">Expertise</label>
-                    <input type="text" id="expertise" name="expertise" >
+                    <input type="text" id="expertise" name="expertise" required>
                 </div>
                 <div class="form-group">
                     <label for="skills">Skills</label>
-                    <input type="text" id="skills" name="skills" >
+                    <input type="text" id="skills" name="skills" required>
                 </div>
                 <div class="form-group">
                     <label for="education">Education</label>
-                    <input type="text" id="education" name="education" >
+                    <input type="text" id="education" name="education" required>
                 </div>
                 <button type="submit" class="submit-button">Submit</button>
             </form>
