@@ -121,7 +121,7 @@
 
     <h1>Add New Offering</h1>
 
-    <form class="offering-form" id="OfferingForm" novalidate>
+    <form class="offering-form" id="OfferingForm">
 
         <fieldset>
 
@@ -130,13 +130,13 @@
             <div class="offering-basic">
 
                 <h3>Offering Name</h3>
-                <input type="text" id="Name" placeholder="Enter offering name" required>
+                <input type="text" id="Name" placeholder="Enter offering name" >
 
                 <h3>Image</h3>
                 <input type="file" id="Image" accept="image/*">
 
                 <h3>Price</h3>
-                <input type="number" min="0" id="Price" placeholder="Enter price" required>
+                <input type="number" min="0" id="Price" placeholder="Enter price" >
 
                 <h3>Description</h3>
                 <textarea placeholder="Add description" id="Description" ></textarea>
@@ -154,7 +154,7 @@
                     <div class="offering-types">
 
                         <label>
-                            <input type="radio" value="Class" name="type" required>
+                            <input type="radio" value="Class" name="type" >
                             Class
                         </label>
 
