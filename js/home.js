@@ -1,28 +1,26 @@
-
 var themeBtn = document.getElementById("theme-btn");
 
 function updateButtonText() {
-  if (document.body.classList.contains("dark")) {
-    themeBtn.textContent = "Light Mode";
+  if (document.body.className == "dark") {
+    themeBtn.innerHTML = "Light Mode";
   } else {
-    themeBtn.textContent = "Dark Mode";
+    themeBtn.innerHTML = "Dark Mode";
   }
 }
 
 if (localStorage.getItem("theme") == "dark") {
-  document.body.classList.add("dark");
+  document.body.className = "dark";
 }
 updateButtonText();
 
 themeBtn.onclick = function () {
-  document.body.classList.toggle("dark");
-
-  if (document.body.classList.contains("dark")) {
-    localStorage.setItem("theme", "dark");
-  } else {
+  if (document.body.className == "dark") {
+    document.body.className = "";
     localStorage.setItem("theme", "light");
+  } else {
+    document.body.className = "dark";
+    localStorage.setItem("theme", "dark");
   }
-
   updateButtonText();
 };
 
@@ -46,7 +44,7 @@ var clockBox = document.getElementById("clock");
 
 function updateClock() {
   var now = new Date();
-  clockBox.textContent = now.toLocaleDateString() + " " + now.toLocaleTimeString();
+  clockBox.innerHTML = now.toLocaleDateString() + " " + now.toLocaleTimeString();
 }
 
 updateClock();
