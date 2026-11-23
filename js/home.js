@@ -49,3 +49,30 @@ function updateClock() {
 
 updateClock();
 setInterval(updateClock, 1000);
+// Extra: Do you know? tips
+var tips = [
+  { title: "Salt is the Key for Delicious Pasta",
+    text: "Salt the water before cooking pasta, for better taste and the perfect texture." },
+  { title: "Rest Your Meat",
+    text: "Let meat rest for 5-10 minutes after cooking so the juices stay inside." },
+  { title: "Cold Butter for Flaky Dough",
+    text: "Use cold butter when making pastry to get light and flaky layers." },
+  { title: "Fresh Herbs at the End",
+    text: "Add soft herbs like parsley and basil at the end to keep their flavor." },
+  { title: "Dry Before You Sear",
+    text: "Pat meat or vegetables dry before searing to get a golden crust." }
+];
+
+var tipIndex = 0;
+var tipTitle = document.getElementById("tip-title");
+var tipText = document.getElementById("tip-text");
+var tipBtn = document.getElementById("tip-btn");
+
+tipBtn.onclick = function () {
+  tipIndex = tipIndex + 1;
+  if (tipIndex == tips.length) {
+    tipIndex = 0;
+  }
+  tipTitle.innerHTML = tips[tipIndex].title;
+  tipText.innerHTML = tips[tipIndex].text;
+};
