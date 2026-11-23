@@ -155,7 +155,16 @@ body.dark .filter-buttons button.active {
   table { width: 95%; font-size: 14px; }
   .dashboard-links a { width: 90%; }
 }
-
+@media (max-width: 768px) {
+    .filter-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .filter-buttons button {
+        padding: 8px 16px;
+    }
+}
 </style>
  <link rel="stylesheet" href="style.css">
 </head>
