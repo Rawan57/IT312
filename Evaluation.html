@@ -141,6 +141,23 @@ main h1 {
   padding: 6px;
 }
  
+
+.evaluation-form select,
+.evaluation-form textarea {
+  background-color: var(--white);
+  color: var(--espresso);
+}
+
+.evaluation-form select,
+.evaluation-form textarea {
+  background-color: var(--white);
+  color: var(--espresso);
+}
+
+body.dark .evaluation-form select.error,
+body.dark .evaluation-form textarea.error {
+    color:#e0af60;;
+}
 </style>
 
 
@@ -191,7 +208,6 @@ main h1 {
   <form action="#" method="post" class="evaluation-form" id="evaluation-form" novalidate>
 
     
-<div class="options-row" id="rating-row"></div>
 
     <label for="offering">Choose the Completed Offering</label>
     <div class="select-box">
@@ -207,16 +223,16 @@ main h1 {
       <span class="arrow">&#9660;</span>
     </div>
 
-    <fieldset>
-      <legend>Rating</legend>
-      <div class="options-row">
-        <label><input type="radio" name="rating" value="1" required> 1</label>
-        <label><input type="radio" name="rating" value="2"> 2</label>
-        <label><input type="radio" name="rating" value="3"> 3</label>
-        <label><input type="radio" name="rating" value="4"> 4</label>
-        <label><input type="radio" name="rating" value="5"> 5</label>
-      </div>
-    </fieldset>
+<fieldset>
+  <legend>Rating</legend>
+  <div class="options-row" id="rating-row">
+    <label><input type="radio" name="rating" value="1"> 1</label>
+    <label><input type="radio" name="rating" value="2"> 2</label>
+    <label><input type="radio" name="rating" value="3"> 3</label>
+    <label><input type="radio" name="rating" value="4"> 4</label>
+    <label><input type="radio" name="rating" value="5"> 5</label>
+  </div>
+</fieldset>
 
     <label for="feedback">Written Feedback</label>
     <textarea id="feedback" name="feedback" rows="3"

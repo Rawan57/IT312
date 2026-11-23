@@ -1,17 +1,29 @@
 
 var themeBtn = document.getElementById("theme-btn");
 
+function updateButtonText() {
+  if (document.body.classList.contains("dark")) {
+    themeBtn.textContent = "Light Mode";
+  } else {
+    themeBtn.textContent = "Dark Mode";
+  }
+}
+
 if (localStorage.getItem("theme") == "dark") {
   document.body.classList.add("dark");
 }
+updateButtonText();
 
 themeBtn.onclick = function () {
   document.body.classList.toggle("dark");
+
   if (document.body.classList.contains("dark")) {
     localStorage.setItem("theme", "dark");
   } else {
     localStorage.setItem("theme", "light");
   }
+
+  updateButtonText();
 };
 
 //Back to Top
